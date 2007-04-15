@@ -1,0 +1,23 @@
+
+To make the LSSTSRD.ps file:
+
+latex LSSTSRD.tex
+latex LSSTSRD.tex
+makeglos.pl LSSTSRD.glo
+latex LSSTSRD.tex
+dvips -t letter -o LSSTSRD.ps LSSTSRD.dvi
+
+
+Note:
+Text is in files:   
+introduction.tex  
+scidrivers.tex  
+tables.tex
+membership.tex  
+appendices.tex  
+
+which are included in the main file LSSTSRD.tex
+
+Two support files are required: pdfrhl.tex and glossary.sty,
+and the rest is standard latex. 
+

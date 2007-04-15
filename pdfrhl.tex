@@ -1,0 +1,88 @@
+%
+% Handle pdflatex/latex transparently
+%
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+    \pdffalse           % we are not running PDFLaTeX
+\else
+    \pdfoutput=1        % we are running PDFLaTeX
+    \pdftrue
+\fi
+%----------------------------------------------------------------------
+\ifpdf
+    \usepackage[pdftex,
+        colorlinks=true,
+        urlcolor=rltblue,               % \href{...}{...}
+        anchorcolor=rltbrightblue,
+        filecolor=rltgreen,             % \href*{...}
+        linkcolor=rltred,               % \ref{...} and \pageref{...}
+        menucolor=webdarkblue,
+        citecolor=webbrightgreen,
+        pdftitle={A Document With An Image},
+        pdfauthor={Udo K. Schuermann, Ringlord Technologies},
+        pdfsubject={A Demonstration with Extra Cheese},
+        pdfkeywords={latex pdf gimp batch thumbnails hyperlinks},
+        pagebackref,
+        pdfpagemode=None,
+        bookmarksopen=true]{hyperref}
+    \pdfcompresslevel=9
+    \usepackage[pdftex]{graphicx}
+    \usepackage{thumbpdf}
+\else
+    \usepackage[
+        colorlinks=true,
+        urlcolor=rltblue,               % \href{...}{...}
+        anchorcolor=rltbrightblue,
+        filecolor=rltgreen,             % \href*{...}
+        linkcolor=rltred,               % \ref{...} and \pageref{...}
+        menucolor=webdarkblue,
+        citecolor=webbrightgreen]{hyperref}
+    \usepackage{graphicx}
+\fi
+
+\usepackage{color}
+\definecolor{rltbrightred}{rgb}{1,0,0}
+\definecolor{rltred}{rgb}{0.75,0,0}
+\definecolor{rltdarkred}{rgb}{0.5,0,0}
+%
+\definecolor{rltbrightgreen}{rgb}{0,0.75,0}
+\definecolor{rltgreen}{rgb}{0,0.5,0}
+\definecolor{rltdarkgreen}{rgb}{0,0,0.25}
+%
+\definecolor{rltbrightblue}{rgb}{0,0,1}
+\definecolor{rltblue}{rgb}{0,0,0.75}
+\definecolor{rltdarkblue}{rgb}{0,0,0.5}
+
+\definecolor{webred}{rgb}{0.5,.25,0}
+\definecolor{webblue}{rgb}{0,0,0.75}
+\definecolor{webgreen}{rgb}{0,0.5,0}
+
+\definecolor{purple}{cmyk}{0.4, 0.8, 0.3, 0.0}
+
+% In PDF mode this will use   "myLogo.jpg"
+% In LaTeX mode this will use "myLogo.eps"
+%\includegraphics[width=3in]{myLogo}
+
+% Jeremy Goodman's list environment, with smaller interitem spacings:
+\newenvironment{sitemize}%
+{%
+	\begin{list}
+        {$\bullet$}
+        {\setlength{\itemsep}{-1ex plus0.2ex}
+        }
+}
+{
+	\end{list}
+}
+
+%------------------------------------------------------------------------------
+%
+% This is useful for PDF files generated from SM's .PS files using mogrify,
+% which appear to lack a valid bounding box
+%
+\newcommand{\smgraphics}[2]{%
+   \begin{boxedminipage}[t]{6.5in}
+   \vskip-0.9in \hskip-0.3in
+   \scalebox{0.82}{\includegraphics{#1.#2}}%
+   \vskip-2.1in~
+   \end{boxedminipage}}
