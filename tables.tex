@@ -1537,16 +1537,16 @@ averaged over an arbitrary FOV must have the median less than
 on $\le$1 arcmin scale for unresolved bright sources using the full survey data
 (hereafter ellipticity).}
 for $\theta \le 1$ arcmin, and less than
-\param{TE3}
+\param{TE2}
 {The maximum value for the median ellipticity correlation function
 on $\ge$5 arcmin scale for unresolved bright sources using the full survey data
 (hereafter ellipticity).}
 for $\theta \ge 5$ arcmin. No more than
 \param{TEF}
 {The maximum fraction of ellipticities for unresolved bright sources using the
-full survey data exceeding TE2 or TE4 (\%).}
+full survey data exceeding TE3 or TE4 (\%).}
 \% of images will have these medians larger than
-\param{TE2}{At most TEF \% of ellipticities for unresolved bright sources
+\param{TE3}{At most TEF \% of ellipticities for unresolved bright sources
 using the full survey data may exceed this value on $\le$1 arcmin scales
 (see TE1).}
 for $\theta \le 1$ arcmin, and
@@ -1563,34 +1563,35 @@ Quantity       &   Design Spec & Minimum Spec  & Stretch Goal \\
       TE1 & $2 \times 10^{-5}$  & $3 \times 10^{-5}$ & $1 \times 10^{-5}$ \\
       TE2 & $1 \times 10^{-7}$  & $2 \times 10^{-7}$ & $6 \times 10^{-8}$ \\
       TEF & $15\%$              & $15\%$             & $10\%$             \\
-      TE3 & $4 \times 10^{-5}$  & $6 \times 10^{-5}$ & $2 \times 10^{-4}$ \\
-      TE4 & $2 \times 10^{-7}$  & $3 \times 10^{-7}$ & $2 \times 10^{-7}$ \\
+      TE3 & $4 \times 10^{-5}$  & $6 \times 10^{-5}$ & $2 \times 10^{-5}$ \\
+      TE4 & $2 \times 10^{-7}$  & $3 \times 10^{-7}$ & $1 \times 10^{-7}$ \\
 \hline
 \end{tabular}
 \caption{These residual PSF ellipticity correlations apply to the $r$ and $i$ bands.}
 \label{fullEllip}
 \end{table}
 
-These values are motivated by data showing that the atmospheric
-contribution to residual ellipticity correlation averages down by $N$
-with $N$ independent exposures (not $\sqrt{N}$ because the units are
-``ellipticity squared''); here we have extrapolated from the
-single-exposure values assuming $N$=100 for concreteness. This assumes that
-effective use of the priors discussed in the single-image ellipticity specifications
-is made, otherwise recuring systematics will dominate the averaged-down
-random atmosphere effects; i.e. this may require optimal fitting of the PSF
-and a model for a galaxy in each image rather than a stack.
+Tests based on data obtained by Subaru telescope suggest that
+these values are achievable: the atmospheric contribution to residual
+ellipticity correlation averages down with the number of exposures. This
+assumes that effective use of the priors discussed
+in the single-image ellipticity specifications is made, otherwise recuring
+systematics will dominate the averaged-down random atmosphere effects; i.e.
+this may require optimal fitting of the PSF and a model for a galaxy in each
+image rather than a stack. The residual ellipticity correlations
+vary smoothly so it is sufficient to specify limits in these two angular
+regions.
 
-On 1 arcmin to 5 arcmin scales, these residual ellipticity correlations put LSST
-systematics a factor of a few below the weak lensing shot noise,
-i.e. statistical errors will dominate over systematics. On larger
-scales, the noise level imposed by nature due to shot noise plus
+On 1 arcmin to 5 arcmin scales, these residual
+ellipticity correlations put LSST systematics a factor of a few below the
+weak lensing shot noise, i.e. statistical errors will dominate over systematics.
+On larger scales, the noise level imposed by nature due to shot noise plus
 cosmic variance is almost scale-independent, whereas the atmospheric
 contribution to systematics becomes negligible.  Therefore the
-specifications on 5 arcmin scales apply to all larger scales as well.  On
-scales larger than the field of view, sources of systematic error have
-less to do with the instrumentation than with the operations (due to
-the seeing distribution), software, and algorithms.  It is recommended
+specifications on 5 arcmin scales apply to all larger scales as well
+(as per section \ref{WLstudies}).  On scales larger than the field of view, sources of
+systematic error have less to do with the instrumentation than with the operations
+(due to the seeing distribution), software, and algorithms.  It is recommended
 that the scheduler attempt to match the seeing distribution in each
 patch of sky, so that at the end of the survey at most a small fraction
 of patches will have substantially better or worse seeing than average.
