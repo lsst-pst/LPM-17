@@ -3,8 +3,8 @@
 
 \bigskip
 
-The following tables includes excerpts from the Aug 23, 2005 LSST Baseline
-Design Summary (available from http://www.lsstcorp.org)
+The following tables includes excerpts from the March 16, 2010 LSST Baseline
+Design Summary (available from http://www.lsst.org/lsst/science/survey\_requirements)
 that are most relevant to this document.
 
 \begin{table}[h]
@@ -15,21 +15,21 @@ that are most relevant to this document.
    Quantity                &     Baseline Design Specification     \\
 \hline
 Optical Configuration      &  3-mirror modified Paul-Baker          \\
-Mount configuration        &  Alt -- azimuth                        \\
-Final f-Ratio              &  f/1.25                                \\
+Mount configuration        &  Alt -- Azimuth                        \\
+Final f-Ratio              &  f/1.234                                \\
 Field of view area         &  9.6 deg$^2$                           \\
 Aperture                   &  8.4 m                                 \\
-Effective aperture         &  6.5 m                                \\
-Effective \'etendue (A$\Omega$)  &  318 m$^2$deg$^2$                \\
+Effective aperture         &  6.68 m                                \\
+Effective \'etendue (A$\Omega$)  &  319 m$^2$deg$^2$                \\
 Plate Scale                &  50.9 microns/arcsec (0.2 arcsec pix)  \\
 Pixel count                &  3.2 Gigapixel                         \\
-Wavelength Coverage        &  320 -- 1050 nm                        \\
-Standard exposure sequence &  39 sec total for 2x15 sec exposure    \\
+Wavelength Coverage        &  330 -- 1070 nm                        \\
+Standard exposure sequence &  41 sec total for 2x15 sec exposure    \\
                            &  (with slew, without filter change)    \\
 \hline
 \end{tabular}
 }
-\caption{The LSST September 2007 Baseline Design Parameters.}
+\caption{The LSST March 2010 Baseline Design Parameters.}
 \end{table}
 
 \newpage
@@ -85,20 +85,23 @@ sampling of time scales ranging from 25 sec to 15 min.
 \bigskip
 
 \begin{figure}[h]\centering
-\includegraphics[width=\textwidth]{lsstfilters.ps}
-\caption{The {\it current} design of the LSST bandpasses. The vertical
-axis shows the overall system throughput (computed by K. Gilmore).}
+\includegraphics[width=\textwidth]{filters_thruputs.ps}
+\caption{The {\it current} design of the LSST bandpasses (solid lines:
+the full throughput, including the atmosphere and idealized system,
+described by $S_b(\lambda)$ from eq.~\ref{SDef}).
+The dotted line shows the throughput for a standard atmosphere at
+airmass $X=1.0$ used in computations ($S^{atm}(\lambda)$ from eq.~\ref{SDef}).}
 \end{figure}
 
 
 \newpage
-\appendix{\large\bf Appendix D: The Seeing Distribution at the Cerro Pachon site}
+\appendix{\large\bf Appendix D: The Seeing Distribution at the Cerro Pach\'{o}n site}
 
 \bigskip
 
 \begin{figure}[h!]\centering
-\includegraphics[width=13cm]{CerroPachonSeeing.ps}
-\caption{The seeing distribution measured at the Cerro Pachon site using DIMM at
+\includegraphics[width=13cm]{CerroPachonSeeing.eps}
+\caption{The seeing distribution measured at the Cerro Pach\'{o}n site using DIMM at
 500 nm (red histogram), and corrected using the outer scale parameter of 30 m
 (blue histogram). For details about the outer scale correction see Tokovinin
 2002 (PASP, 114, 1156). The lines show best-fit log-normal distributions, with
@@ -107,3 +110,28 @@ the best-fit parameters as shown in the inset (computed by C. Claver).}
 
 
 
+
+\newpage
+\vskip 0.1in
+\appendix{\large\bf Appendix E: Document History}
+
+\bigskip
+
+\begin{enumerate}
+\item {\bf Version 4.3.3 (September 2007)} The first version approved by the LSST Board, placed under the Change
+ Control Board, and made public.
+\item {\bf Version 5.1.1 (March 2010)} The most important changes, relative to v4.3.3, are:
+\begin{itemize}
+\item Incorporated references to the LSST Science Book
+\item Made listed science drivers normative
+\item Listed expected performance for photometric redshifts of galaxies
+\item Improved quantitative drivers and specifications for trigonometric parallax and proper motion
+\item Adopted a general principle that software algorithms should not dominate measurement errors
+\item Relaxed minimum requirements for single-image depth (by 0.2-0.3 mag)
+\item Made it explicit that the system throughput function is a part of photometric data products
+\item Removed specifications for ghosting
+\item Removed specifications for modeling residuals for single-image ellipticity
+\item Made explicit mini and micro surveys
+\item Made explicit the three levels of data products
+\end{itemize}
+\end{enumerate}

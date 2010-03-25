@@ -2,23 +2,28 @@
 \label{scidriv}
 
 The LSST collaboration has identified the aforementioned four science
-programs as the key drivers of the science requirements for the
+programs as the \G{normative} key drivers of the science requirements for the
 project. Their selection was the result of discussions within the
 consortium and reflects the input of
 \begin{itemize}
-\item the three NRC studies that have endorsed the LSST,
+\item the three National Research Council studies\footnote{
+  Astronomy and Astrophysics in the New Millennium, NAS 2001;
+  Connecting Quarks with the Cosmos: Eleven Science Questions for the New Century, NAS 2003;
+  New Frontiers in the Solar System: An Integrated Exploration Strategy, NAS 2003.
+} that have endorsed the LSST,
 \item the report of the LSST Science Working Group (SWG), an independent
       committee formed by NOAO to represent community interests
 \item the scientific interests of the partners in the LSSTC
-\item the physics and astrophysics community
+\item the physics and astrophysics community.
 \end{itemize}
 
 The SWG report\footnote{Available as
 http://www.lsst.org/Science/docs/DRM2.pdf} (also known as the Strauss
 report), the LSST NSF proposal\footnote{Available (to LSST) as
-http://docushare.lsstcorp.org/docushare/dsweb/Get/Document-220}, and the
-LSST Dark Energy Task Force report\footnote{Available as
-http://www.lsst.org/Science/docs/050617c\_deftwp.pdf} should be
+http://docushare.lsstcorp.org/docushare/dsweb/Get/Document-220},
+the LSST Dark Energy Task Force report\footnote{Available as
+http://www.lsst.org/Science/docs/050617c\_deftwp.pdf}, \G{and the LSST
+Science Book} should be
 consulted for a more detailed discussion of the major scientific advances
 that can be expected from the construction of a wide-field telescope that
 is dedicated to repeated, deep, multi-color imaging of the sky.
@@ -27,14 +32,18 @@ For each of the four primary science drivers selected by the LSST
 collaboration, this
 Section briefly describes the science goals and the most challenging
 requirements for the telescope and instrument that are derived from those
-goals (a separate document will deal with the data management
-requirements). Tables are also provided in the subsequent Section, that
+goals (separate documents will deal with the data management
+requirements\footnote{\G{The two high-level documents derived from
+this document and other constraints are the LSST System Requirements
+Document and the LSST System Architecture Document.}}).
+Tables are also provided in the subsequent Section, that
 integrates the detailed requirements of these four programs. If these
 requirements are met by the LSST -- and indications of the preliminary
 engineering studies undertaken to date indicate that they can be -- then
 the LSST will not only enable all four of these major scientific
 initiatives but will also make it possible to pursue many other research
-programs. Some examples are described in the SWG report, but the long-lived
+programs. Some examples are described in the \G{LSST Science Book},
+\B{SWG report} but the long-lived
 data archives of the LSST will have the astrometric and photometric
 precision needed to support entirely new research directions which will
 inevitably develop during the next several decades.
@@ -46,17 +55,40 @@ inevitably develop during the next several decades.
 Driven by observations, current models of cosmology require the existence
 of both dark matter and dark energy (DE). One of the primary challenges for
 fundamental physics is to understand these two major components of the
-universe. The primary DE science drivers for LSST come from a suite of two
+universe. In addition to making a unique map of dark matter structure over
+half the sky, \G{LSST will probe dark energy in multiple ways, providing cross
+checks and removal of important degeneracies.}
+The primary DE science drivers for LSST come from a suite of two
 and three point cosmic shear tomography analyses coupled with galaxy power
 spectrum and baryon acoustic oscillation (BAO) data, as well as from the
 use of supernovae as standard candles. Due to its wide area coverage, LSST
-will be uniquely capable of measuring at least 7 parameters related to DE:
+will be uniquely capable of measuring 7 parameters related to DE:
 the lowest 6 eigenmodes of the DE equation of state vs. redshift, $w(z)$, and
-any directional dependence.  DE exerts its largest effects at moderate
+any directional dependence.
+\G{Combining these probes, LSST will measure the comoving distance as a function
+of redshift in the redshift range 0.3--3.0 with an accuracy of 1-2\%, and
+separately the growth of cosmic mass structure.
+A sample of about four billion galaxies with sufficiently accurate photometric
+redshifts is required. In order to achieve this comoving distance accuracy,
+the photometric redshifts requirements for this $i<25$
+flux-limited galaxy sample are i) the rms ($\sigma$) for error in $(1+z)$ must be
+smaller than 0.02, ii) the fraction of $3\sigma$ (``catastrophic'') outliers must be
+below 10\%, and iii) the bias must be below 0.003. These requirements are
+primary drivers for the photometric depth of the main LSST survey. In addition,
+methods for rejecting the majority of those outliers, and for characterizing their
+effects on the sample, must be developed. The calibration of photometric redshifts
+and their errors can be a combination of correlation with bright spectroscopic samples
+and spot-checks with many-band photometric redshift samples. Combining BAO with
+weak lensing of galaxies can significantly reduce sensitivity to bias systematics.
+}
+
+DE exerts its largest effects at moderate
 redshift; LSST's redshift coverage will bracket the epoch at which DE began
 to dominate the cosmic expansion. When combined with Planck CMB data, the
 LSST data will sharply test models of DE, whether due to new
 gravitational physics, vacuum energy, or other causes.
+
+
 
 
 \subsubsection{Weak Lensing Studies}
@@ -64,7 +96,8 @@ gravitational physics, vacuum energy, or other causes.
 
 Weak lensing (WL) techniques can be used to map the distribution of mass as a function
 of redshift and thereby trace the history of both the expansion of the universe and the
-growth of structure. These investigations use common deep wide-area multi-color imaging with stringent
+growth of structure \G{(see Chapter 14 in the LSST Science Book)}. These investigations use
+common deep wide-area multi-color imaging with stringent
 requirements for the shear systematics in at least two bands and photometry in all bands.
 These requirements are covered in more detail in the LSST DETF report and references therein.
 
@@ -74,51 +107,65 @@ correction depends on how many stars are available, and thus depends on the angu
 The overall scale of the combined errors is set by the requirement of distinguishing models
 of the origin of DE: unique sensitivity to the cosmic shear power spectrum from arcminute
 to 100 degree scales and wide redshift range, the ability to probe at least six DE
-eigenfunctions, and any variation over the sky. This leads to an etendue requirement
+eigenfunctions, and any variation over the sky. This leads to an \'{e}tendue requirement
 for {\it areal coverage times depth} (several billion source galaxies to $z$=3), as well
-as photometric precision and wide angular coverage ($>$ 90 deg).  [Shear on angular scales
+as photometric precision and wide angular coverage ($>$ 90 deg).
+\B{[Shear on angular scales
 less than a few arcminutes is compromized in cosmological interpretation due to baryon
-coupling.]
+coupling.]}
 
 The power of the LSST relative to existing weak lensing surveys derives from its
 ability to survey much larger areas of the sky to faint limiting
 surface brightness while maintaining exquisite control of systematic errors in the
-galaxy shapes. Therefore, characterizing dark energy places particularly strong
+galaxy shapes. Characterizing dark energy places particularly strong
 requirements on the total area of sky covered, the depth of the stacked image, the
 number of revisits to each field, the ellipticity and sampling of the point spread
-function (PSF), and the choice of filters, which must be suited to obtaining accurate
-photometric redshifts. At least five bands are required. Photometric precision of at
+function (PSF), and the choice of filters, which must be suited to allow accurate
+photometric redshifts to be measured. At least six bands are required. Photometric precision of at
 least 1\% is required, as well as quite accurate calibration of photometric redshifts over the
-redshift interval 0.1 -- 3.
+redshift interval 0.3 -- 3.
 
-The scale of residual shear errors should be set by the statistical error floors,
-not systematics. The two components of statistical shear errors vary oppositely
+The scale of residual shear errors should be set by the statistical error floors on the
+coadded data, not systematics. The two components of statistical shear errors vary oppositely
 with angular scale. On small angular scales ($<$ few arcminutes) the source galaxy
 shear error is dominated by the random ``shot'' noise of the galaxy intrinsic
-ellipticities (about e=0.3 rms per galaxy) and the finite areal density of source
+ellipticities (about $e$=0.3 rms per galaxy) and the finite areal density of source
 galaxies. On large angular scales the source shear error is dominated by large scale
 structure cosmic variance. The cross-over point varies with source redshift. For
-all redshifts in projection, over the range of angular scales for LSST WL science
+all redshifts in projection,
 the two errors sum to nearly a constant statistical shear power of $3\times 10^{-7}$,
-or a source rms residual ellipticity of 0.001. The residual shear power
-systematics vs. angular scale ({\it after PSF corrections}) must be less than 30\% of
-the statistical shear power. This includes correlations between angle bins. To achieve
-this goal, the residual shear power systematics (after corrections) must track the
-statistical errors at a factor of $\sim$3 lower level. While the statistical error is
+or a source rms residual ellipticity of 0.001, over the range of angular scales for LSST WL science.
+The residual shear power
+systematics at all angular scales ({\it after PSF corrections}) must be less than 30\% of
+the statistical shear power,  including correlations between angle bins. To achieve
+this goal, the residual shear power systematics (after corrections) must be below the
+statistical errors by a factor of $\sim$3. \B{While the statistical error is
 uncorrelated with angular scale (source galaxies randomly oriented), systematic
 errors are typically correlated. Therefore, statistical errors are reduced when
 averaged over a broad angular band, but systematics do not unless they are chopped
-or are stochastic from seeing.
-
+or are uncorrelated between observations due to seeing.}
+\G{
+While the statistical error is uncorrelated with angular scale (as source galaxies are randomly
+oriented), systematic errors are typically correlated. Statistical errors are reduced when
+averaged over many exposures and a broad angular band, but systematics do not average
+down unless they are chopped or vary stochastically from exposure to exposure due to seeing.
+Thus there are two limiting angular regimes with different methods for reductions of systematics:
+(1) arcminute scale systematics in the residual PSF ellipticity correlation average down like the
+number of exposures [further tests are needed for large N], and
+(2) degree scale residual systematics can be reduced via chopping by dithering and rotating.
+In both cases further tests are needed to make sure residuals continue to average down to the
+needed level.}
 
 
 
 \subsubsection{Supernovae}
 
 Supernovae (SN) provided the first evidence that the expansion of the
-universe is accelerating. LSST will be a powerful SN factory. Operating in
+universe is accelerating. LSST will be a powerful SN factory
+\G{(see Chapter 11 in the LSST Science Book)}. Operating in
 a standard mode of repeated scans of the sky with images taken every few
-days and with exposures of 30 seconds, LSST will discover 250,000 Type Ia
+days and with exposures of 30 seconds, LSST will discover \B{250,000}
+\G{of the order $10^5$} Type Ia
 SN annually. Their mean redshift will be $z\sim$0.45 with a maximum
 redshift of $\sim$0.7. These data, when combined with priors from other
 experiments, can constrain the lowest eigenmode of $w$ (\ie the mean
@@ -146,7 +193,7 @@ determining photometric redshifts from supernova light-curves is currently
 being pursued by several community groups. Good image quality is required
 to separate SNe photometrically from their host galaxies. Observations in
 five photometric bands will be necessary to ensure that, for any given
-supernova, light-curves in four bands will be obtained (due the spread in
+supernova, light-curves in four  bands will be obtained (due to the spread in
 redshift). Absolute band-to-band photometric calibration to 1\% is adequate, but
 the importance of K-corrections to supernova cosmology implies that the
 calibration of the relative offsets in zero points between filters remains
@@ -157,6 +204,14 @@ makes this more of a problem than for stellar spectra.
 
 \subsection{Taking an Inventory of the Solar System}
 
+\G{LSST will provide data for millions of small bodies in our Solar System. Previous studies
+of these objects have led to dramatic changes in our understanding of the process of
+planet formation and evolution, and the relationship between our Solar System and other
+systems. These small bodies also serve as large populations of ``test particles'', recording
+the dynamical history of the giant planets, revealing the nature of the Solar System impactor
+population over time, and illustrating the size distributions of planetesimals, which were the
+building blocks of planets  (see Chapter 5 in the LSST Science Book).}
+
 The Earth orbits within a swarm of asteroids; some small number of these
 objects will ultimately strike the Earth's surface. The U.S. Congress has
 mandated that by the year 2008, 90\% of the near-Earth asteroids (NEAs)
@@ -165,16 +220,16 @@ determined. Impacts of NEAs of this size have the potential to change the
 Earth's climate and cause mass extinctions, such as the one credited with
 killing the dinosaurs. A NASA report published in 2003 estimates
 conservatively that with current search techniques, about 70\% of the NEAs
-with diameters larger than 1 km will be cataloged by 2008. This same report
+with diameters larger than 1 km will have been be cataloged by 2008. This same report
 quantifies the risk of impacts by smaller bodies, which have the potential
-of causing significant ground damage and recommends as a reasonable next
-goal reduction of the residual hazard by another order of
-magnitude. Achieving this goal would require discovery of about 90\% of the
+of causing significant ground damage, and recommends reduction of the residual
+hazard by another order of magnitude  as a reasonable next
+goal. Achieving this goal would require discovery of about 90\% of the
 potentially hazardous asteroids (PHAs) down to diameters of about 140
 m. While it is unlikely that any other currently planned facility could achieve
 this goal within a decade or two, modeling suggests that the LSST is capable
-of finding 90\% of the PHAs with diameters larger than 140 m within ten
-years.
+of finding \B{90\%} \G{84\%} of the PHAs with diameters larger than 140 m within
+ten years.
 
 The search for PHAs puts strong constraints on the cadence of observations,
 requiring closely spaced pairs of observations two or preferably three
@@ -186,13 +241,14 @@ asteroids that will be detected, LSST must provide the follow-up required
 to derive orbits rather than relying, as current surveys do, on separate
 telescopes. The observations should be obtained within $\pm15$ degrees of
 the Ecliptic.  The images should be well sampled to enable accurate
-astrometry, with absolute accuracy not worse than 0.1 arcsec. There are no
+astrometry, with absolute accuracy not worse than 0.1 arcsec for sources
+detected with the signal-to-noise ratio $SNR>10$. There are no
 special requirements on filters, although bands such as V and R that offer
 the greatest sensitivity are preferable.  The images should reach a depth
 of at least 24.5 (5$\sigma$ for point sources) in the $r$ band in order to
 probe the $\sim0.1$ km size range at main-belt distances. Based on recent
 photometric measurements of asteroids by the Sloan Digital Sky Survey, the
-photometry should be better that 1-2\% to allow for color-based taxonomic
+photometry should be better than 1-2\% to allow for color-based taxonomic
 classification.
 
 The LSST can also make a major contribution to mapping Kuiper Belt Objects
@@ -220,17 +276,18 @@ collisional history of various types of KBOs. KBO science would be greatly
 amplified if a small fraction of the observing time were devoted to
 hour-long observations in the ecliptic. This same mode of observation may
 have applications to the study of variable and transient objects. Apart
-from exposure time and the requirement for multiple filters (at least two)
-to classify objects according to composition, the requirements for the KBO
-science are essentially similar to the requirements for the detection and
-orbital determination.
+from exposure time \G{limits}, \B{and the requirement for at least two filters
+to classify objects according to composition,} the requirements for the KBO
+science are similar to the requirements for the detection and
+orbital determination \G{for other Solar System bodies}.
 
 
 
 \subsection{Exploring the Transient Optical Sky}
+\label{sec:transients}
 
-
-The LSST will open a new window on the variable sky. Recent surveys have
+The LSST will open a new window on the variable sky \G{(see Chapter 8 in
+the LSST Science Book)}. Recent surveys have
 shown the power of variability for studying gravitational lensing,
 searching for supernovae, determining the physical properties of gamma-ray
 burst sources, etc. The LSST, with its repeated, wide-area coverage to deep
@@ -240,13 +297,14 @@ bursts and X-ray flashes, at least some of which apparently mark the deaths
 of massive stars; AGNs and blazars; and very possibly new classes of
 transients, such as binary mergers and stellar disruptions by black holes.
 It is likely that the LSST will detect
-numerous microlensing events in the local group and perhaps beyond.  The
+numerous microlensing events in the Local Group and perhaps beyond.  The
 LSST would provide alerts for concerted monitoring of these events, and
 open the possibility of discovering planets and obtaining spectra of lensed
 stars in distant galaxies as well as our own.  LSST can also provide
 multi-wavelength monitoring over time of objects discovered by the
-Gamma-Ray Large Area Space Telescope (GLAST) and the Energetic X-ray
-Imaging Survey Telescope (EXIST). With its large aperture, the LSST is well
+\G{Fermi Gamma-ray Space Telescope (formerly GLAST)}
+\B{Gamma-Ray Large Area Space Telescope (GLAST)}
+and the Energetic X-ray Imaging Survey Telescope (EXIST). With its large aperture, the LSST is well
 suited to conducting a Deep Supernova Search in selected areas.  LSST will
 also provide a powerful new capability for monitoring periodic variables,
 such as RR Lyrae stars, which can be used to map the Galactic halo and
@@ -268,18 +326,19 @@ ranging from $\sim$1 min (to constrain the properties of fast faint
 transients such as those recently discovered by the Deep Lens Survey) to
 $\sim$10 years (to study long-period variables and quasars) should be
 probed over a significant fraction of the sky. It should be possible to
-measure colors of fast transients, and to reach $r \sim 24$ in individual
-visits. Fast reporting of likely transients to the community is required in
-order to facilitate followup observations.
+measure colors of fast transients \G{on timescales of a few minutes},
+and to reach $r \sim 24$ in individual visits. Fast reporting of likely transients
+to the community is required in order to facilitate followup observations.
 
 
 
-\subsection{Mapping the Milky Way}
+\subsection{Mapping the Milky Way \label{sec:MW}}
+
 
 The LSST is ideally suited to answering two basic questions about the Milky
 Way Galaxy: What is the structure and accretion history of the Milky Way?
 What are the fundamental properties of all the stars within 300 pc of the
-Sun?
+Sun? \G{(see Chapters 6 and 7 in the LSST Science Book).}
 
 Standard models posit that galaxies form from seeds planted by the Big Bang
 with accretion over time playing a significant role in determining their
@@ -321,25 +380,34 @@ especially in crowded fields; photometric precision of at least 1\% to
 separate main sequence and giant stars; stringent astrometric accuracy to
 enable parallax and proper motion measurements; and dynamic range that
 allows measurement of astrometric standards at least as bright as r =
-15. In order to probe the halo out to distances of 100 kpc using numerous
-main-sequence stars, the total depth has to reach $r\sim27$ (assuming 5\%
-photometry in the $r$ band at $r=25.6$; the SDSS has demonstrated such
-studies out to distances of 15 kpc using data with $r<21.5$). To study the
-metallicity distribution of stars in the Sgr tidal stream and other halo
-substructures at distances out to at least $\sim$40 kpc, the total depth in
-the $u$ band has to reach $\sim24.5$.  In order to constrain tangential
-velocity at a distance of 10 kpc to within 10 km/s the proper motion
-accuracy has to be at least 0.2 mas/yr. The same requirement follows from
-the decision to obtain the same proper motion accuracy as GAIA at its faint
-end ($r\sim20$). The LSST will then represent an ``extension'' of GAIA
+15. In order to probe the halo out to distances of 100 kpc using large numbers of
+main sequence stars, the total depth \G{($5\sigma$ for unresolved sources)}
+has to reach $r\sim27$ (assuming 5\%
+photometry in the $r$ band at $r=25.5$).
+\B{the SDSS has demonstrated such
+studies out to distances of 15 kpc using data with $r<21.5$).}
+To study the metallicity distribution of stars in the Sgr tidal stream and other halo
+substructures at distances out to at least $\sim$40 kpc, the coadded depth in
+the $u$ band has to deliver \G{5\% photometry at $u\sim24.5$}.
+In order to constrain tangential velocity at a distance of 10 kpc to within 10 km/s
+with the most luminous main-sequence stars \G{(low-metallicity blue turn-off stars with $M_r=5.5$)},
+the proper motion accuracy has to be at least 0.2 mas/yr \G{at $r=20.5$ (1$\sigma$ per coordinate)}.
+The same requirement follows from the decision to obtain the same proper motion accuracy
+as Gaia at its faint end ($r\sim20$). The LSST will then represent an ``extension'' of Gaia
 astrometric measurements to 4 magnitudes greater depth. In order to produce
 a complete sample of the solar neighborhood stars out to a distance of 300
 pc (the thin disk scale height), with 3$\sigma$ or better geometric
-distances, the parallax measurements accurate to 1 mas are required. In
-summary, these requirements imply that the LSST will enable studies of the
+distances, parallax measurements accurate to 1 mas (1$\sigma$) are required
+\G{for stars with $M_r=15$}.
+\G{To obtain 3$\sigma$ or better geometric distances for T9/Y0 brown dwarfs with
+$z-y$ colors measured with 10$\sigma$ or better precision (in coadded data),
+parallax  measurements for sources detected only in $y$ band visits at 10$\sigma$
+significance must have an accuracy of 6 mas (1$\sigma$). }
+
+In summary, these requirements imply that the LSST will enable studies of the
 distribution of numerous main-sequence stars beyond the presumed edge of
 the Galaxy's halo, of their metallicity distribution throughout most of the
-halo, of their kinematics beyond the thick disk/halo boundary, and will
+halo, and of their kinematics beyond the thick disk/halo boundary, and will
 obtain direct distance measurements below the hydrogen-burning limit for a
 representative thin-disk sample.
 

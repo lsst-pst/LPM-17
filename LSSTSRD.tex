@@ -2,7 +2,7 @@
 \documentclass[11pt,letterpaper]{article}
 
 %% Robert Lupton's macros (including color support)
-\input pdfrhl.tex
+%\input pdfrhl.tex
 
 %%\setlength\parskip{0.5ex}%
 \textwidth 6.0truein
@@ -22,12 +22,32 @@
 \makeglossary
 \newcommand{\param}[2]{\glossary{name=#1,description={#2}}#1\xspace}
 
-\newcommand{\colour}[1]{\color{#1}}
+\usepackage[usenames]{color}
+%\newcommand{\colour}[1]{\color{#1}}
+
+
+\newcommand{\B}[1]{{\color{blue} #1}}
+\newcommand{\R}[1]{{\color{red} #1}}
+\newcommand{\G}[1]{{\color{red} #1}}
 
 \begin{document}
 
-\centerline{\Large\bf The LSST Science Requirements Document}
-\centerline{\large\bf v4.3.3, Sep 14, 2007}
+\centerline{\Large\bf \R{DRAFT DRAFT DRAFT DRAFT DRAFT}}
+
+\centerline{\Large\bf The LSST System Science Requirements Document}
+\centerline{\large\bf v5.1.1, Mar 24, 2010}
+
+
+\B{Text to be removed from the v4.3 version is typeset in BLUE.}
+
+%\R{Text that was added to the v5.0 version is typeset in RED.}
+
+\G{Text that was added to the v5.1 version is typeset in RED.}
+
+
+{\it These rules apply to text at least a sentence long. Single word
+changes are often not highlighted, unless they significantly change the
+implied meaning.}
 
 \input{introduction}
 
