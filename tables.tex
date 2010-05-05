@@ -1,3 +1,4 @@
+\newpage
 \section{Detailed Description of Science Requirements }
 
 The purpose of this Section is to lay out a common set of science
@@ -147,6 +148,7 @@ Quantity               & Design Spec & Minimum Spec & Stretch Goal      \\
 \label{Tfilters}
 \end{table}
 
+\vskip -0.1in
 The extension of the SDSS system to longer wavelengths (the $y$ band at
 $\sim$1 $\mu$m) is
 mandated by the increased effective redshift range achievable with the LSST
@@ -165,7 +167,8 @@ redshift for galaxies detectable in deep LSST images). The current design of
 the bandpasses is illustrated in Appendix C.
 
 
-\paragraph{The Number of Filters Used in a Night\\}
+
+\paragraph{\vskip -0.2in The Number of Filters Used in a Night\\}
 
 The number of filters,
 \param{Nfilters}{The number of filters that can be housed simultaneously
@@ -183,7 +186,7 @@ specified as Nfilters (Table~\ref{Tfilterchanges}).
 \param{TDFCmax}{The maximum time to replace filters in the camera (hours).}
 hours (Table~\ref{Tfilterchanges}).}
 
-\begin{table}[h]
+\begin{table}[bh!]
 \begin{tabular}{|l|r|r|r|}
 \hline
 Quantity        & Design Spec & Minimum Spec & Stretch Goal      \\
@@ -197,6 +200,8 @@ in the camera.}}
 \label{Tfilterchanges}
 \end{table}
 
+
+\newpage
 {\bf Specification:} The maximum time allowed to switch filters already
 present inside the camera is specified as
 \param{TFmax}{The maximum time allowed to switch filters already
@@ -317,7 +322,7 @@ Quantity        & Design Spec & Minimum Spec & Stretch Goal   \\
       Z1  (\%)  &    24.4     &     24.0    &     24.6        \\
 \hline
 \end{tabular}
-\caption{Single image depth in the $r$ band (SNR=5 for point sourcesss).
+\caption{Single image depth in the $r$ band (SNR=5 for point sources).
 The D1 and Z1 values are expressed on the AB magnitude scale
 and assume \R{a source with spectral energy distribution $F_\nu$=constant,}
 \B{an A0V star} fiducial seeing of 0.7 arcsec (FWHM), fiducial dark sky brightness of
@@ -368,8 +373,8 @@ mag (Table~\ref{ImageDBtable}).
 \hline
  Minim. spec.  &       u   &     g    &      r     &   i   &   z   &  y   \\
 \hline
-\B{OLD DB1 (mag)}  &    23.7   &    24.8  &     24.5   &  23.8 &  23.1 & 21.9 \\
-\G{NEW DB1 (mag)}  &    23.4   &    24.6  &     24.3   &  23.6 &  22.9 & 21.7 \\
+%\B{OLD DB1 (mag)}  &    23.7   &    24.8  &     24.5   &  23.8 &  23.1 & 21.9 \\
+\G{DB1 (mag)}  &    23.4   &    24.6  &     24.3   &  23.6 &  22.9 & 21.7 \\
 %\hline
 % DT1 (\%)   &     10    &     35   &      50    &   50  &   40  &  20  \\
 \hline
@@ -421,7 +426,7 @@ additional survey time is about half a year for the $u$ and $g$ bands, and about
 discussed in \S~\ref{VvsB}). However, while such strategy would deliver the
 required coadded survey depth, it would have a negative impact on the single
 visit depth and time sampling frequency. The system throughput should never
-drop below values needed to meet minumum specifications for image depths
+drop below values needed to meet minimum specifications for image depths
 listed in Table~\ref{ImageDBtable}.}
 
 \B{A decrease in throughput, DT1, by 30\% of the listed
@@ -471,6 +476,8 @@ quality variation over the field of view specified below.  The primary
 purpose of these image depth requirements is to define allowed variation in
 detector sensitivity.
 
+
+\newpage
 \paragraph{The Minimum Exposure Time\\}
 
 {\bf Specification:} The shortest possible exposure time will not be
@@ -779,51 +786,6 @@ is further discussed in Section~\ref{sec:fullEllip} (see Table~\ref{fullEllip}).
 
 
 
-
-\B{{\bf Table~\ref{Tellip2} will be moved to the LSST System Requirements Document.}
-The supporting text was moved to the Full Survey Specifications (see Table~\ref{fullEllip}).}
-
-\B{{\bf Specification:} The median LSST image (two per visit) must have the median
-$E_1$, $E_2$, and $E_X$ averaged over the FOV, less than
-\param{SE3}{The maximum residual ellipticity correlation amplitude on $\le$1 armin scales.}
-for $\theta \le 1$ arcmin, and less than
-\param{SE4}{The maximum residual ellipticity correlation amplitude on $\ge$5 armin scales.}
-for $\theta \ge 5$ arcmin. No more than
-\param{EF2}{The maximum fraction of ellipticities exceeding a residual ellipticity correlation
-amplitude of SE3 and SE4 (\%).}
-\% of images will exceed values of
-\param{SE5}{EF2 \% of the ellipticities may exceed this value of residual ellipticity
-correlation amplitude on $\le$1 armin scales.}
-for $\theta \le 1$ arcmin, nor
-\param{SE6}{EF2 \% of the ellipticities may exceed this value of residual ellipticity
-correlation amplitude on $\ge$5 armin scales.}
-for $\theta \ge 5$ arcmin (Table~\ref{Tellip2}). }
-
-
-\begin{table}[h]
-\begin{tabular}{|l|r|r|r|}
-\hline
-Quantity       & Design Spec & Minimum Spec & Stretch Goal \\
-\hline
-SE3 & $2 \times 10^{-4}$  & $3 \times 10^{-4}$ & $1 \times 10^{-4}$ \\
-SE4 & $5 \times 10^{-7}$  & $1 \times 10^{-6}$ & $3 \times 10^{-7}$ \\
-EF2 & $10\%$              & $15\%$             & $10\%$             \\
-SE5 & $4 \times 10^{-4}$  & $6 \times 10^{-4}$ & $2 \times 10^{-4}$ \\
-SE6 & $1 \times 10^{-6}$  & $2 \times 10^{-6}$ & $5 \times 10^{-7}$ \\
-\hline
-\end{tabular}
-\caption{These residual ellipticity correlation amplitudes apply to the $r$ and $i$ bands.}
-\label{Tellip2}
-\end{table}
-
-\B{We do not specify values on larger scales because by supposition each
-CCD is being fitted separately. Power on scales larger than the CCD should
-not exceed the limits specified for the 5 arcmin scale. Due to the planned sky
-tiling by dithering, this also constrains PSF gradients.}
-
-
-
-
 %%%%%%%%%%%%%%
 \subsubsection{Photometric Quality}
 \label{photoacc}
@@ -849,7 +811,7 @@ are photon-counting devices)
 Here, $S_b(\lambda)$ is the overall atmosphere + system throughput
 \begin{equation}
 \label{SDef}
-         S_b(\lambda) = S_b^{sys}(\lambda) \times S^{atm}(\lambda).
+         S_b(\lambda) = S_b^{sys}(\lambda) \times S_b^{atm}(\lambda).
 \end{equation}
 Traditionally, the in-band flux is reported on a magnitude scale,
 and here we adopt AB magnitudes defined as
@@ -859,13 +821,13 @@ and here we adopt AB magnitudes defined as
 \end{equation}
 
 In order to interpret photometric measurements at the error level
-specified below ($<$1\%), both $S_b^{sys}(\lambda)$ and $S^{atm}(\lambda)$
+specified below ($<$1\%), both $S_b^{sys}(\lambda)$ and $S_b^{atm}(\lambda)$
 must be known with sufficient precision. Experience with precursor surveys,
 such as SDSS, suggest that the dependence of both functions on
 wavelength have to be directly measured to break the 1\% photometric error
 barrier (especially for sources with complex spectral energy distributions,
 such as supernovae). While the individual normalizations of $S_b^{sys}(\lambda)$ and
-$S^{atm}(\lambda)$ are {\it not} required (c.f. eq.~\ref{PhiDef}) to
+$S_b^{atm}(\lambda)$ are {\it not} required (c.f. eq.~\ref{PhiDef}) to
 interpret measurements using eq.~\ref{Fb}, the flux scale (calibration)
 errors affect the reported values of $F_b$ (i.e. $m_b$).  \R{Therefore,
 for each photometric measurement both $F_b$ and $\phi_b(\lambda)$
@@ -895,7 +857,7 @@ photometric error (including random calibration errors and count extraction
 errors), and $\Delta_m$ is the overall (constant) offset of the
 internal survey system from a perfect AB system (the six values of $\Delta_m$
 are equal for {\it all} the cataloged objects). Here, $\delta_m$ describes
-the various systematic dependences of the internal zeropoint error around
+the various systematic dependencies of the internal zeropoint error around
 $\Delta_m$, such as position in the field of view ($x,y$), the normalized
 system response ($\phi$), position on the sky ($\alpha, \delta$), and
 the source spectral energy distribution ($SED$). Note that the average of
@@ -999,7 +961,7 @@ Quantity   & Design Spec & Minimum Spec & Stretch Goal   \\
       PA4 (millimag)  &    15     &       20    &       15     \\
 \hline
 \end{tabular}
-\caption{The specificiations for the spatial uniformity of photometric
+\caption{The specifications for the spatial uniformity of photometric
 zeropoints. The values for PA3 and PA4 may be somewhat worse in the
 $u$ band (but not by more than a factor of two).}
 \label{TphotomUniform}
@@ -1012,7 +974,7 @@ across the sky.
 The specified requirements are driven by the photometric redshift accuracy,
 the separation of stellar populations, and the accuracy of inter-comparing
 distance moduli from different supernovae. These requirements apply
-to {\it both} the bright and faint ends and constrain the nonlinearity of the
+to {\it both} the bright and faint ends and constrain the non-linearity of the
 flux scale. To verify that these requirements are
 fulfilled, samples of standard stars may be needed (an alternative is to
 track the shifts of morphological features in color-color diagrams).
@@ -1079,52 +1041,6 @@ determined distances. Note that the internal band-to-band transformations,
 $\Delta_{mr}$, are required to be much more accurate as they may be calibrated
 and controlled by other means, and are not sensitive to errors in overall
 flux scale of photometric calibrators.
-
-
-
-\paragraph{The photometric precision and ghosting\\}
-
-\B{{\bf Table~\ref{ghosting} will be moved to the LSST System Requirements Document.}}
-
-
-\B{{\bf Specification:} The measured photometric error using repeated observations
-will not exceed the calculated noise (from photon statistics and other
-expected noise sources) by more than
-\param{EPErr}{The ratio of the measured and calculated photometric error (\%).}
-\%. No more than
-\param{GhostAF}{The maximum fractional image area affected by strong ghosting (\%).}
-\% of image area will be affected by ghosts with surface brightness gradients
-on 1 arcsec scale exceeding 1/3 of the sky noise (Table~\ref{ghosting}). }
-
-
-\begin{table}[h]
-\begin{tabular}{|l|r|r|r|}
-\hline
-Quantity   & Design Spec & Minimum Spec & Stretch Goal   \\
-\hline
-      EPErr  (\%)       &    10       &      20      &        5         \\
-    GhostAF  (\%)       &     1       &       5      &      0.5         \\
-\hline
-\end{tabular}
-\caption{The maximum allowed ratio of the measured and calculated photometric error
- (EPErr\%), and the maximum allowed fractional image area affected by strong ghosting
-(GhostAF\%). These values apply to the $r$ and $i$ bands, and EPErr to {\it all}
-sources.}
-\label{ghosting}
-\end{table}
-
-\B{These requirements limit the impact of ghosting. The first requirement effectively
-places an upper limit on the precision of sky brightness determination
-($\sim$1 \% for design specification), which may be affected by ghosts. The
-second requirement is derived from the effects of ghosting on shape
-systematics on the scale of faint galaxies.
-
-It is also required that no more than 1\% of pixels per sensor, on no more than
-15\% of sensors, will be scientifically unusable (in terms of requirements
-specified in this document), and that PSF-integrated residuals from imperfect
-crosstalk corrections are not to exceed, per image, a local statistical
-significance of 3$\sigma$ (design), 5$\sigma$ (minimum), and 2$\sigma$
-(stretch goal).}
 
 
 
@@ -1337,7 +1253,7 @@ assumes a nominal 10-year duration \G{with about 90\% of the observing
 time allocated} for the \G{main} LSST survey. The same assumption
 was adopted here to derive the requirements described below.  \R{Only visits
 that satisfy the requirements listed in the previous section are counted
-towards the specificiations listed in this Section. For example, if the photometric
+towards the specifications listed in this Section. For example, if the photometric
 accuracy falls below requirements due to complex atmospheric cloud structure,
 or due to extraneous noise sources inside the system, the data will not be counted.}
 \G{The remaining 10\% of observing time will be used to obtain improved coverage
@@ -1395,7 +1311,7 @@ these two scenarios is only 0.6 mag.
 Detailed simulations of LSST operations \B{available at the time of writing
 \B{(the so-called {\it cronos.92} Operations Simulation run)}}
 indicate that the following sky coverage and
-allocation of observing time per band satifies a variety of science drivers at a
+allocation of observing time per band satisfies a variety of science drivers at a
 nearly optimal level. However, {\it the listed requirements should be
 understood only as an illustration of the LSST capabilities because
 the survey optimization is still in progress.}
@@ -1565,46 +1481,6 @@ Appendix B as a minimalistic scenario. It shows that $\sim$10\% of the
 total area can be revisited on short time scales by utilizing field
 overlaps.
 
-
-
-\B{Table~\ref{TareaPM} will be replaced by Table~\ref{TablePARAPM}}
-
-\B{{\bf Specification:} At least
-\param{RVA2}{The minimum area of sky with at least 25\% of the total number of
-observations of a given area separated in time by more than 5 years from
-the rest of the observations of the same area (square degrees).}
-square degrees will have at least 25\% of the total number of observations
-of a given area separated in time by more than 5 years from the rest of the
-observations of the same area. At least
-\param{RVA3}{The minimum area of sky with at least 25\% of the total number of observations
-of a given area spanning at least 4 different calendar months (square degrees).}
-square degrees will have at least 25\% of the total number of observations
-of a given area span at least 4 different calendar months (Table~\ref{TareaPM}).}
-
-
-\begin{table}[h]
-\begin{tabular}{|r|r|r|r|}
-\hline
-Quantity            & Design Spec & Minimum Spec & Stretch Goal     \\
-\hline
-  RVA2  (deg$^2$)   &  15,000      &  10,000       &    20,000        \\
-  RVA3  (deg$^2$)   &  15,000      &  10,000       &    20,000        \\
-\hline
-\end{tabular}
-\caption{\B{The minimum area with revisit time distribution allowing accurate
-parallax and proper motion measurements.}}
-\label{TareaPM}
-\end{table}
-
-\B{
-The requirements are derived using a requirement of proper motion accuracy of 0.2 mas/yr
-and a parallax accuracy of 1 mas. The adopted design specification
-guarantees that it will be possible to achieve such measurement accuracies
-over the RVA2 and RVA3 areas of the sky.
-}
-
-
-
 Strong constraints on the distribution of visits in time come from the goal
 of accurately measuring stellar parallax and proper motion (see Section~\ref{sec:MW}).
 Irrespective of the delivered astrometric precision, parallax measurements will
@@ -1734,8 +1610,8 @@ $E_2$, and $E_X$ are $\sim 10^{-4}$ at scales of an arcminute and smaller for
 a 10-second exposure at 0.7 arcsec delivered seeing, falling below shot noise
 levels at $\theta = 5$ arcmin.  It is a requirement that LSST images not degrade
 this quality significantly. The defocus spectrum from atmosphere induced seeing,
-combined with optics astigmatism and FPA (focal plane array) nonflatness, produces
-so-called ``B mode" shear (non-zero $E_X$). Using as priors the measured FPA nonflatness, the wavefront
+combined with optics astigmatism and FPA (focal plane array) non-flatness, produces
+so-called ``B mode" shear (non-zero $E_X$). Using as priors the measured FPA non-flatness, the wavefront
 curvature measurements for that image, and the optics astigmatism vs. defocus
 data,
 one can optimally fit the PSF over the image. Similarly, requirements on these
@@ -1795,7 +1671,7 @@ down with the number of exposures. This assumes that effective use of the priors
 discussed in the single-image ellipticity specifications is made, otherwise recurring
 systematics will dominate the averaged-down random atmosphere effects. This requires
 optimal correction of the PSF in each image, and fits a model for each galaxy in each
-image [MutiFit]. An alternative approach being explored is to utilize an image of the
+image [MultiFit]. An alternative approach being explored is to utilize an image of the
 coadded PSF, and fit a forward model of the (known) sum PSF convolved with a galaxy
 model to the stacked image [StackFit].}
 On 1 arcmin to 5 arcmin scales, these residual
@@ -1917,7 +1793,7 @@ of view that the system can report in real time.}
 \end{table}
 
 The users
-will have an option of a query-like pre-filltering of this data stream
+will have an option of a query-like pre-filtering of this data stream
 in order to select likely candidates for specific transient type. Users
 may also query the LSST science database at any time for additional
 information that may be useful, such as the properties of static objects
