@@ -19,3 +19,4 @@ which are included in the main file LSSTSRD.tex
 Three support files are required: makeglos.pl, pdfrhl.tex and
 glossary.sty; and the rest is standard latex.
 
+*** the pdf file can be built by simply executing >make *** 

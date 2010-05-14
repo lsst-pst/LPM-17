@@ -1198,6 +1198,41 @@ catalogs. Note that the delivered absolute astrometric accuracy may be
 fundamentally limited by the accuracy of astrometric standard catalogs.
 
 
+
+\paragraph{The time-recording accuracy\\}
+
+{\bf Specification:}
+The LSST system must record times (such as TAI)
+with an internal (relative) accuracy of
+\param{TACREL}{The internal (relative) time-recording accuracy (millisecond).}
+milliseconds and an absolute accuracy of
+\param{TACABS}{The absolute time-recording accuracy (millisecond).}
+milliseconds (Table~\ref{TtimeRec}).
+
+\begin{table}[h]
+\begin{tabular}{|r|r|r|r|}
+\hline
+Quantity             & Design Spec & Minimum Spec & Stretch Goal     \\
+\hline
+ TACREL (millisec)   &     1  &    1   &    1 \\
+ TACABS (millisec)   &    10  &   10   &    1 \\
+\hline
+\end{tabular}
+\caption{The requirements for the time-recording accuracy.}
+\label{TtimeRec}
+\end{table}
+
+The time-recording accuracy is driven by the linkage and
+orbital computations for solar system objects. An assumed
+nominal angular motion for a very fast object of 10 deg/day,
+and a limit on astrometric accuracy of 5 milliarcsec, yield
+a requirement of 10 millisec. The specification for internal
+accuracy is adopted as ten times smaller than for absolute
+accuracy.
+
+
+
+
 \paragraph{Auxiliary System Characteristics\\}
 
 The weak lensing science may be jeopardized by systematics in shape
