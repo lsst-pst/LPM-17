@@ -4,7 +4,7 @@
 The purpose of this Section is to lay out a common set of science
 requirements necessary to achieving a set of concrete scientific measurements,
 of specified accuracy, in the four main science areas described above.  It
-will serve as the primary starting point for deriving engineering
+will serve as the primary starting point for deriving engineering project
 requirements to be placed upon the various technical subsystems that
 comprise the LSST. Note that some of these requirements are not fully
 independent of the existing baseline design (see Appendix A), and of
@@ -48,7 +48,7 @@ program that places the strongest constraints is also provided.
 
 
 \subsection{Distinction between Single Image Specifications and the
-                        Full Survey Performance}
+                        Full Survey Performance \label{sec:defs}}
 
 
 Detailed simulations show that the LSST will be capable of obtaining over
@@ -228,9 +228,9 @@ observing efficiency.}
 
 \paragraph{Filter Out-of-Band Constraints\\}
 
-{\bf Specification:} Beyond the wavelengths where the transmission curve
-(including hardware and atmosphere) decreases to below 0.1\% of its peak value
-for the first time, the mean transmission in any 10nm interval must be less than
+{\bf Specification:} Beyond the wavelengths more than one FWHM from the filter
+center wavelength (including hardware and atmosphere), the mean transmission
+in any 10nm interval must be less than
 \param{Fleak}{The maximum permitted out-of-band flux for filters
 (defined as flux, normalized by the peak value, in any 10nm interval
 at wavelengths beyond those where the transmission curve decreases to
@@ -317,7 +317,7 @@ listed in Table~\ref{ImageDtable}).
 \hline
 Quantity        & Design Spec & Minimum Spec & Stretch Goal   \\
 \hline
-      D1 (mag)  &    24.7     &     24.5    &     24.8        \\
+      D1 (mag)  &    24.7     &     24.3    &     24.8        \\
       DF1 (\%)  &    10       &      20     &       5         \\
       Z1  (\%)  &    24.4     &     24.0    &     24.6        \\
 \hline
@@ -449,9 +449,9 @@ depth by about 0.1 mag.}
 {\bf Specification:} For an image representative of the median depth (\ie
  with the 5$\sigma$ detection depth of D1 mag), the depth distribution
 over individual devices will have no more than
-\param{DF2}{The maximum fraction of images Z2 mag brighter than the median depth
-over individual devices (\%).}
-\% of the sample brighter by
+\param{DF2}{The maximum fraction of images Z2 mag brighter than the
+median depth over individual devices (\%).}
+\% of the sample brighter by more than
 \param{Z2}{DF2 \% of images on different devices will be this much brighter
 than the median depth (mag) (see DF2).}
 mag than the median depth (Table~\ref{depthVarFOV}).
@@ -1597,8 +1597,23 @@ to minimize possible systematic errors.
 %%%%%% TT
 
 
-\paragraph{The overall image PSF ellipticity distribution\\}
+\paragraph{Galaxy shear measurement accuracy, and PSF ellipticity residuals\\}
 \label{sec:fullEllip}
+
+The important angular scales for weak lensing two-point shear correlation probes of dark
+energy are 10 arcminute to several degrees, where the cosmic shear correlation signal can
+get as small as $10^{-6}$ at low redshift and several degree scales. The hemisphere sky
+coverage of LSST is needed in order to achieve the required statistical precision in these
+shear correlations, and to suppress cosmic variance.  As explained in section~\ref{sec:DE},
+for the LSST ``gold'' sample of 4 billion galaxies (defined by $i<25.3$), the resulting random
+component of the shear cross correlation noise level is about $3\times10^{-7}$ over this
+angular range up to several degrees.  It is thus important that the systematic component be
+less than about 30\% of this noise (to become negligible when added in quadrature).  The
+requirement then is that the galaxy shear extraction algorithm (and system hardware) be
+capable of delivering this level of galaxy shear systematics residual.  Because of the dominant
+galaxy shape shot noise, the shear errors in a large sample are dominated by PSF errors at the
+galaxy positions (together with errors in model fitting given the PSF). This then leads to a
+requirement on the residual PSF ellipticity correlations on these angular scales.
 
 A limit to the effectiveness of the PSF-correction schemes is our
 knowledge of the delivered PSF within each image, which is sampled
@@ -1739,8 +1754,8 @@ including alerts to objects that have changed brightness or position.
 and will include images and measurements of positions, fluxes, and shapes, as well
 as variability information such as orbital parameters for moving objects and
 an appropriate compact description of light curves.
-\item {\bf Level 3} data products will be created by science teams external to the
-project using suitable Applications Programming Interfaces (APIs) that will be provided
+\item {\bf Level 3} data products will be created by the community, including project teams,
+using suitable Applications Programming Interfaces (APIs) that will be provided
 by the LSST Data Management System. The Data Management System will also provide
 at least 10\% of its total capability for user-dedicated processing and user-dedicated storage.
 The key aspect of these capabilities is that they will reside ``next to" the LSST data,
@@ -1748,6 +1763,49 @@ avoiding the latency associated with downloads. They will also allow the science
 teams to use the database infrastructure to store their results.
 \end{itemize}
 }
+
+
+One of the most fundamental advantages of LSST survey is the use of individual
+images and corresponding modeling of varying observing conditions (such as seeing
+and the background emission) in order to reduce systematic errors in measured
+parameters.  Many types of systematic errors (those that do not decrease with
+exposure time or source brightness; e.g., errors in photometry due to imperfect
+point-spread-function modeling or due to flatfield errors) that will be present in
+individual visits will be uncorrelated between different observations (for example,
+seeing will be uncorrelated; the data taking strategy will include dithering). These
+uncorrelated systematic errors can be significantly reduced by appropriate processing
+of data that utilizes the full knowledge of varying observing conditions. Substantial
+benefits of such error reduction for LSST science,  together with a general principle
+that the measurement errors for fundamental quantities should not be dominated
+by algorithmic performance, lead to the following requirements for the image
+processing software.
+
+{\bf Minimum Specification:} observing conditions, such as point-spread function and
+background level, will be evaluated and known for each visit, and for all objects
+detected in deep coadded data and in difference images. The object properties,
+such as positions, fluxes, and shapes, will be measured for all these objects in
+each visit. These measurements must meet the design specifications from this
+document; more complex issues, such as deblending of overlapping sources
+and galaxy photometry, will be addressed with the best existing algorithms.
+
+{\bf Design Specification:} a flexible and robust software framework that can process
+data using methods which preserve information from individual exposures, and
+use it to constrain best-fit model parameters, will be developed.
+This framework will not assume, nor be dependent on, a specific
+set of processing algorithms. The algorithms to be ultimately deployed must model
+point-spread function, basic extended source parameters (such as galaxy shapes),
+source blending, the impact of observing conditions and other effects, at least at
+the level required to meet the SRD design specifications for the relevant parameters.
+
+{\bf Stretch goal:} a set of improved algorithms will be developed, meeting a general principle,
+specified at the end of section~\ref{sec:defs} in this document, that the measurement errors for
+fundamental quantities, such as astrometry, photometry and image size, should not be dominated
+by algorithmic performance. In other words, whenever LSST data
+will support a better performance than required by the SRD design specifications,
+various algorithmic improvements which will deliver such performance will be
+undertaken within the project resource boundaries. These algorithmic improvements
+will be prioritized by the project, guided by input from the
+LSST Science Council and the LSST Science Collaborations.
 
 {\bf Specification:} Images and catalog data will be released to
 publicly-accessible repositories as soon as possible after they are
