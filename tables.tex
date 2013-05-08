@@ -782,16 +782,16 @@ spectral energy distributions (such as main sequence stars and normal
 galaxies).
 
 
-
-
 The requirements for photometric calibration accuracy are specified using
 the following error decomposition (valid in the limit of small errors)
 \begin{equation}
 \label{photoSysErr}
- m_{cat} = m_{true} + \sigma + \delta_m(x,y,\phi,\alpha,\delta,SED,t) + \Delta_m,
+ m^{std}_{cat} = m^{std}_{true} + \sigma + \delta_m(x,y,\phi^{std},\alpha,\delta,SED,t) + \Delta_m,
+\label{eq:mstdcat}
 \end{equation}
-where $m_{true}$ is the true magnitude defined by eqs.~\ref{Fb} and
-\ref{ABmag}, $m_{cat}$ is the cataloged LSST magnitude, $\sigma$ is the random
+where $m^{std}_{true}$ is the true magnitude defined by eqs.~\ref{Fb} and
+\ref{ABmag}, $m^{std}_{cat}$ is the cataloged LSST magnitude, \R{both evaluated using
+$\phi^{std}$,} $\sigma$ is the random
 photometric error (including random calibration errors and count extraction
 errors), and $\Delta_m$ is the overall (constant) offset of the
 internal survey system from a perfect AB system (the six values of $\Delta_m$
@@ -859,7 +859,9 @@ This requirement, defined for bright, unresolved sources (\ie those whose measur
 are not dominated by photon statistics, see \S~\ref{singleImageSpecs}), specifies the
 distribution of random photometric errors, $\sigma$, and constrains both the repeatability
 of extracting counts from images and the ability to monitor (or model) the changes in
-normalized system response ($\phi$). In practice,
+normalized system response ($\phi$). \R{This specification applies to the cataloged LSST
+magnitudes, $m^{std}_{cat}$ (see eq.~\ref{eq:mstdcat}), for appropriately chosen main sequence
+stars (e.g., non-variable stars color-selected from the main stellar locus).} In practice,
 multiple visits will be used to compute the photometric rms for each individual star in each
 bandpass and then study its dependence on position on the sky and on the camera, stellar
 color, brightness, time, etc.
