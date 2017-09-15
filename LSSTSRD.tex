@@ -1,0 +1,56 @@
+%%\documentclass[11pt,preprint,graphicx]{aastex}
+\documentclass[11pt,letterpaper]{article}
+
+%% Robert Lupton's macros (including color support)
+%\input pdfrhl.tex
+
+%%\setlength\parskip{0.5ex}%
+\textwidth 6.0truein
+\hoffset=-0.5truein
+\textheight 8.0truein
+
+\def\etal{{\it et al.}\xspace}
+\def\eg{{\it e.g.}\xspace}
+\def\ie{{\it i.e.}\xspace}
+
+\usepackage{graphicx}
+\usepackage{xspace}
+
+\usepackage[style=altlist]{glossary}
+\renewcommand{\glossaryname}{\large Parameters Specified in this Document}
+\setglossary{glodelim={\ p.\ }}
+\makeglossary
+\newcommand{\param}[2]{\glossary{name=#1,description={#2}}#1\xspace}
+
+\usepackage[usenames]{color}
+%\newcommand{\colour}[1]{\color{#1}}
+
+
+%\newcommand{\B}[1]{{\color{blue} #1}}
+%\newcommand{\R}[1]{{\color{red} #1}}
+%\newcommand{\G}[1]{{\color{red} #1}}
+\newcommand{\B}[1]{}
+\newcommand{\R}[1]{#1}
+\newcommand{\G}[1]{#1}
+
+\begin{document}
+
+%\centerline{\Large\bf \R{DRAFT DRAFT DRAFT DRAFT DRAFT}}
+
+\centerline{\Large\bf The LSST System Science Requirements Document}
+\centerline{\large\bf v5.2.3, June 19, 2011}
+
+\input{introduction}
+
+\input{scidrivers}
+
+\input{tables}
+
+\input{membership}
+
+\input{appendices}
+
+\newpage
+\printglossary
+
+\end{document}
