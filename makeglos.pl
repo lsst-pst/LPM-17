@@ -2,7 +2,7 @@
 
 # File    : makeglos
 # Author  : Nicola Talbot
-# Version : 1.3 (2005/06/28)
+# Version : 1.5 (2006/07/20)
 # Description: simple Perl script that calls makeindex.
 # Intended for use with "glossary.sty" (saves having to remember
 # all the various switches)
@@ -40,7 +40,10 @@ else
    $name = @ARGV[0];
 }
 
+$istfile = "$name.ist";
+
 # check log file for other glossary types
+# and for ist file name
 
 if (open AUXFILE, "$name.aux")
 {
@@ -56,6 +59,11 @@ if (open AUXFILE, "$name.aux")
          {
             print "added glossary type '$2' ($3,$4,$1)\n";
          }
+      }
+
+      if (m/\\\@istfilename\s*{([^}]*)}/)
+      {
+         $istfile = $1;
       }
    }
 
@@ -105,11 +113,7 @@ unless ($opt_p eq "")
    $mkidxopts .= " -p $opt_p";
 }
 
-if ($opt_s eq "")
-{
-   $istfile = "$name.ist";
-}
-else
+unless ($opt_s eq "")
 {
    $istfile = $opt_s;
 }
@@ -279,6 +283,11 @@ sub makeindex{
 
          for ($i=0; $i <= $j; $i++)
          {
+            # remove all but the last \delimT
+            while ($item[$i]{'desc'}=~s/\\delimT/$&/sg > 1)
+            {
+               $item[$i]{'desc'}=~s/\\delimT//s;
+            }
             print OUTPUT "\\gloitem ", $item[$i]{'name'},
                         $item[$i]{'desc'};
          }
