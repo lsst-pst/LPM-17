@@ -16,10 +16,10 @@ most stringent requirements from the previous section.
 
 \subsection{The Definitions of Specified Parameters }
 
-For each quantity specifying a requirement, we identify two values: a {\it
-minimum specification}, and a {\it design specification.}
+For each quantity specifying a requirement, we identify two values: a
+\textit{minimum specification}, and a \textit{design specification.}
 
-{\it The minimum specification} shall represent the minimum capability
+\textit{The minimum specification} shall represent the minimum capability
 or accuracy required of the system in order to achieve its scientific
 aims. If the design analysis clearly demonstrates that a minimum
 specification requirement cannot be met, the Science Council will
@@ -27,14 +27,14 @@ reevaluate the science drivers that led to the specification, estimate
 the scientific impact of the failure to meet the specification, and
 report the findings to the Project Director and Project Manager.
 
-{\it The design specification} represents the system design point and will
+\textit{The design specification} represents the system design point and will
 be used as the basis for developing engineering tolerances.  At the time
 this document is written, we believe that the design specification should
 be achievable in the context of the existing baseline concept for the LSST.
 However, as development proceeds, it is conceivable that there may be some
 change in capability away from these values.
 
-In some cases, {\it stretch goals} are specified. These are desirable
+In some cases, \textit{stretch goals} are specified. These are desirable
 system capabilities which will enhance scientific return if they can be
 achieved. Stretch goals are to be pursued if they do not significantly
 increase cost, schedule or risk. To avoid complication and ambiguity, we do
@@ -65,8 +65,8 @@ optimization of LSST observing strategies is a formidable problem that
 requires significant additional analysis. For this reason, only weak
 constraints for observing cadence are listed here (though integral
 quantities such as total depth and sky coverage are specified).
-The required properties of individual images (also known as {\it
-visits}, consisting of two co-added, back-to-back exposures), however,
+The required properties of individual images (also known as
+\textit{visits}, consisting of two co-added, back-to-back exposures), however,
 are specified
 in detail because they directly constrain the capabilities of the hardware
 and software systems. The detailed error budget distribution between the hardware
@@ -108,7 +108,7 @@ We address these complexities as follows. For quantities with strong
 wavelength dependence, requirements are specified in each band. Where
 relevant, fiducial seeing and airmass are specified. For quantities with a
 strong dependence on the signal-to-noise ratio (SNR), requirements are
-specified at the {\it bright end}, defined here as the magnitude range
+specified at the \textit{bright end}, defined here as the magnitude range
 between 1 mag and 4 mag fainter than the saturation limit (full well) in a given
 bandpass.  Assuming that the faint end of this range corresponds to $r=20$,
 and that 5$\sigma$ depth is achieved at $r=24.5$, the photon statistics
@@ -123,8 +123,8 @@ densities of galaxies and high-Galactic-latitude stars are similar: about
 1000 per square degree (implying a typical nearest-neighbor distance for
 stars of the order of 1 arcmin).
 
-We define ``FWHM'' as {\it the full width at half maximum}, and ``rms'' as
-{\it the root-mean-square scatter}. For a one-dimensional Gaussian distribution,
+We define ``FWHM'' as \textit{the full width at half maximum}, and ``rms'' as
+\textit{the root-mean-square scatter}. For a one-dimensional Gaussian distribution,
 FWHM = 2.35\,rms.
 
 
@@ -258,7 +258,7 @@ C) is limited to a 0.05 mag bias in the $u$ band measurement ($<$0.01 mag
 for sources bluer than $u-i=3$).
 
 The temporal change of bandpasses (due to aging of the filters, changes in
-reflectivity of coatings, {\it etc.}) must be sufficiently small to enable
+reflectivity of coatings, \textit{etc.}) must be sufficiently small to enable
 the required photometric calibration accuracy (specified below, see \S
 \ref{photoacc}).
 
@@ -267,9 +267,9 @@ the required photometric calibration accuracy (specified below, see \S
 %%%%%%%%%%%%%%
 \subsubsection{Image Depth and the Minimal Exposure Time}
 
-An {\it exposure} means a single readout of the camera (one of the two
+An \textit{exposure} means a single readout of the camera (one of the two
 back-to-back exposures designed for cosmic ray rejection that together
-represent a {\it visit} to a target field).  Image properties, such as
+represent a \textit{visit} to a target field).  Image properties, such as
 depth (attained magnitude for point sources at some fiducial SNR, here
 taken to be 5), {\bf are defined per visit} (not per exposure), and assume optimal
 count extraction algorithms (e.g. point-spread-function magnitudes). The image
@@ -638,7 +638,7 @@ arcsec
 \caption{The spatial profile (shape) for delivered seeing. These values
   apply to all the bands, as they are defined for a
   fiducial delivered seeing. For a different fiducial seeing, the
-  SRx/seeing ratio, \ie the {\it shape} of the delivered image,
+  SRx/seeing ratio, \ie the \textit{shape} of the delivered image,
   must be preserved.}
 \label{Tspatprof}
 \end{table}
@@ -740,7 +740,7 @@ deliver calibrated in-band flux
 \label{Fb}
              F_b = \int{F_\nu(\lambda) \phi_b(\lambda) d\lambda},
 \end{equation}
-where $F_\nu(\lambda)$ is specific flux of an object {\it at the top} of
+where $F_\nu(\lambda)$ is specific flux of an object \textit{at the top} of
 the atmosphere and $\phi_b(\lambda)$ is the normalized system response
 for the given band (the $\lambda^{-1}$  term reflects the fact that CCDs
 are photon-counting devices)
@@ -767,7 +767,7 @@ such as SDSS, suggest that the dependence of both functions on
 wavelength have to be directly measured to break the 1\% photometric error
 barrier (especially for sources with complex spectral energy distributions,
 such as supernovae). While the individual normalizations of $S_b^{sys}(\lambda)$ and
-$S_b^{atm}(\lambda)$ are {\it not} required (c.f. eq.~\ref{PhiDef}) to
+$S_b^{atm}(\lambda)$ are \textit{not} required (c.f. eq.~\ref{PhiDef}) to
 interpret measurements using eq.~\ref{Fb}, the flux scale (calibration)
 errors affect the reported values of $F_b$ (i.e. $m_b$). Therefore,
 for each photometric measurement both $F_b$ and $\phi_b(\lambda)$
@@ -795,7 +795,7 @@ where $m_{true}$ is the true magnitude defined by eqs.~\ref{Fb} and
 photometric error (including random calibration errors and count extraction
 errors), and $\Delta_m$ is the overall (constant) offset of the
 internal survey system from a perfect AB system (the six values of $\Delta_m$
-are equal for {\it all} the cataloged objects). Here, $\delta_m$ describes
+are equal for \textit{all} the cataloged objects). Here, $\delta_m$ describes
 the various systematic dependencies of the internal zeropoint error around
 $\Delta_m$, such as position in the field of view ($x,y$), the normalized
 system response ($\phi$), position on the sky ($\alpha, \delta$), and
@@ -814,12 +814,12 @@ relative to a fiducial band, say $r$,
 
 The motivation for this separation is twofold. First, $\Delta_{mr}$ can
 be constrained by considering the colors (spectral energy distributions)
-of objects, {\it independently from the overall flux scale} (this can
+of objects, \textit{independently from the overall flux scale} (this can
 be done using both external observations and models). Second, there are
 few science programs that crucially depend on knowing the ``gray
 scale'' offset, $\Delta_r$, at the 1-2\% level. On the other hand,
 knowing the ``band-to-band'' offsets, $\Delta_{mr}$, with such an
-accuracy is {\it critically important} for many applications (e.g.,
+accuracy is \textit{critically important} for many applications (e.g.,
 photometric redshifts of galaxies, type Ia supernovae cosmology, testing
 of stellar and galaxy SED models).
 
@@ -911,7 +911,7 @@ across the sky.
 The specified requirements are driven by the photometric redshift accuracy,
 the separation of stellar populations, and the accuracy of inter-comparing
 distance moduli from different supernovae. These requirements apply
-to {\it both} the bright and faint ends and constrain the non-linearity of the
+to \textit{both} the bright and faint ends and constrain the non-linearity of the
 flux scale. To verify that these requirements are
 fulfilled, samples of standard stars may be needed (an alternative is to
 track the shifts of morphological features in color-color diagrams).
@@ -997,7 +997,7 @@ and accuracy will be achieved (\eg calibration schemes,
 flat-field determination, corrections for atmospheric effects) are purposely
 left out of this discussion as they belong to the Engineering Requirements
 Documents; for example, an all-sky cloud camera or new software algorithms
-(e.g. self-calibration, pioneered as {\it \"{u}bercalibration} by SDSS)
+(e.g. self-calibration, pioneered as \textit{\"{u}bercalibration} by SDSS)
 may be needed to achieve the required photometric accuracy. The same
 approach is taken when specifying astrometric requirements, described next.
 
@@ -1269,7 +1269,7 @@ these two scenarios is only 0.6 mag.
 
 Detailed simulations of LSST operations indicate that the following sky coverage and
 allocation of observing time per band satisfies a variety of science drivers at a
-nearly optimal level. However, {\it the listed requirements should be
+nearly optimal level. However, \textit{the listed requirements should be
 understood only as an illustration of the LSST capabilities because
 the survey optimization is still in progress.}
 
@@ -1324,7 +1324,7 @@ band across the sky area specified in Table~\ref{TskyArea}.}
 \end{table}
 
 
-{\it An illustration}
+\textit{An illustration}
 of the distribution of Nv1 is shown in Table~\ref{TdepthCoadd}.
 It is assumed that $\sim$10\% of the total observing time is allocated to
 each of the $u$ and $g$ bands, and $\sim$20\% to each of the $rizy$ bands. These allocations
@@ -1339,7 +1339,7 @@ metallicity studies all the way to the presumed edge of the Milky Way halo)
 and low-redshift quasars, and to those of very red objects (e.g., high-redshift
 quasars and galaxies, the coldest stars, highly reddened stars in the Milky
 Way disk). The simulations assume an exposure time of 30 seconds per visit,
-which is a result of the survey optimization using {\it simultaneous}
+which is a result of the survey optimization using \textit{simultaneous}
 constraints for the single visit depth, the number of visits, the revisit
 time, and the surveying efficiency (see Section 2.2 in the LSST overview
 paper, arXiv:0805.2366).
@@ -1355,14 +1355,14 @@ paper, arXiv:0805.2366).
 Idealized Depth         &    26.1   &    27.4  &     27.5   &  26.8     &   26.1    & 24.9  \\
 \hline
 \end{tabular}
-\caption{An {\it illustration} of the distribution of the number of visits as
+\caption{An \textit{illustration} of the distribution of the number of visits as
 a function of bandpass, obtained by detailed simulations of LSST operations
 that include realistic weather, seeing and sky brightness distributions,
 as well as allocation of about 10\% of the
 total observing time to special programs. The median
 number of visits per field for all bands is 824. For convenience, the numbers in
 parentheses show the corresponding gain in depth (magnitudes), assuming
-$\sqrt{N}$ scaling. The last row shows the total {\it idealized} coadded
+$\sqrt{N}$ scaling. The last row shows the total \textit{idealized} coadded
 depth for the design specification median depth of a single image (assuming
 5$\sigma$ depths at $X=1$ of $u=23.9$, $g=25.0$, $r=24.7$, $i=24.0$, $z=23.3$ and
 $y=22.1$, from Table~\ref{ImageDBtable}), and the above design specification
@@ -1377,7 +1377,7 @@ The coadded image depth losses due to airmass greater than unity are not
 taken into account because they depend on cadence details. For a large suite
 of simulated main survey cadences, they are about 0.2-0.3 mag, with the median airmass in
 the range 1.2-1.3.
-Table~\ref{TdepthCoadd} specifies the {\it median} number of visits. The actual
+Table~\ref{TdepthCoadd} specifies the \textit{median} number of visits. The actual
 number of visits may vary across the sky. For example, the regions close to
 the Ecliptic may benefit from longer exposures to improve the size and distance
 limit for distant solar system objects. These regions may also require a
@@ -1385,7 +1385,7 @@ larger than median number of visits to improve
 the completeness level for small asteroids. On the other hand, the Galactic
 plane regions may have smaller than median number of visits (\eg very deep
 images may be confusion limited). Details of such variations are not specified
-here, with an understanding that {\it the adopted observing strategy will not
+here, with an understanding that \textit{the adopted observing strategy will not
 jeopardize the goals of any of the four main science themes} (\eg the full
 avoidance of the Galactic plane would have a severe impact on the Galactic
 structure studies). For the same reason, minimum specification
@@ -1547,7 +1547,7 @@ image along some set of perpendicular axes, and $\sigma_{12}^2$ is the
 covariance (again, for the best-fit elliptical Gaussian).
 A PCA fit to the ellipticity components’ dependence on the position within
 each CCD is made, and we examine the residuals.
-It is the {\it correlation of these residuals} $\delta e_1$
+It is the \textit{correlation of these residuals} $\delta e_1$
 and $\delta e_2$, not their
 mean size, which sets the level of weak lensing systematics.  We
 define the residual ellipticity auto and cross correlation functions
