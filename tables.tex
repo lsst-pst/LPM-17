@@ -182,10 +182,6 @@ winter days}.
 {\bf Specification:} The number of filters available at any given time is
 specified as Nfilters (Table~\ref{Tfilterchanges}).
 
-\B{The daytime filter change should be accomplished in less than
-\param{TDFCmax}{The maximum time to replace filters in the camera (hours).}
-hours (Table~\ref{Tfilterchanges}).}
-
 \begin{table}[bh!]
 \begin{tabular}{|l|r|r|r|}
 \hline
@@ -195,8 +191,7 @@ Quantity        & Design Spec & Minimum Spec & Stretch Goal      \\
 \hline
 \end{tabular}
 \caption{The number of filters that can be housed simultaneously within the
-camera. \B{, and the maximum time, in hours, to change which filters are housed
-in the camera.}}
+camera.}
 \label{Tfilterchanges}
 \end{table}
 
@@ -222,8 +217,7 @@ present inside the camera.}
 \end{table}
 
 The ability to rapidly switch active filters will allow more useful color
-measurements of fast transients. \B{, and will prevent a significant loss of
-observing efficiency.}
+measurements of fast transients.
 
 
 \paragraph{Filter Out-of-Band Constraints\\}
@@ -325,10 +319,8 @@ Quantity        & Design Spec & Minimum Spec & Stretch Goal   \\
 \caption{Single image depth in the $r$ band (SNR=5 for point sources).
 The D1 and Z1 values are expressed on the AB magnitude scale
 and assume \R{a source with spectral energy distribution $F_\nu$=constant,}
-\B{an A0V star} fiducial seeing of 0.7 arcsec (FWHM), fiducial dark sky brightness of
+fiducial seeing of 0.7 arcsec (FWHM), fiducial dark sky brightness of
 21 mag/arcsec$^2$, airmass of 1.0, and a total exposure time of 30 sec.
-\B{(the computed depths depend on lunar phase and mirror coatings; aged, unprotected
-aluminum is assumed for the latter and a 3 day old moon for the former).}
 The sky brightness is a conservative estimate corresponding
 to solar maximum. Solar minimum value may be 0.3-0.4 mag fainter, resulting
 in $\sim$0.2 mag deeper data. On the other hand, about  $\sim$0.2 mag loss
@@ -357,8 +349,6 @@ depth for point sources in a given band will not be brighter than
 \param{DB1}{The median 5$\sigma$ (SNR=5) detection
 depth for point sources for all exposures in a given band (mag).}
 mag (Table~\ref{ImageDBtable}).
-\B{with the corresponding {\it implied} overall system throughput of
-\param{DT1}{The overall system throughput (\%).}\%}
 
 
 \begin{table}[h]
@@ -390,16 +380,11 @@ mag (Table~\ref{ImageDBtable}).
 of bandpass (the $r$-band value is identical to that listed in
 Table~\ref{ImageDtable}), assuming 2$\times$15 sec exposures,
 \R{a source with spectral energy distribution $F_\nu$=constant,}
-\B{an A0V star}
 airmass of 1.0, the $r$-band fiducial seeing of 0.7 arcsec (FWHM), and
-the $r$-band sky brightness \B{at solar maximum} of 21 mag/arcsec$^2$
+the $r$-band sky brightness of 21 mag/arcsec$^2$
 (both seeing and sky brightness are converted to the appropriate band using standard
-expressions, \B{for a 3 day old moon} as implemented in the LSST Exposure Time
-Calculator). \B{The {\it implied} overall system throughput as a function of
-bandpass, DT1, is also computed using the LSST Exposure Time Calculator
-(assuming an effective primary mirror diameter of 6.5m). At the time of
-writing, the listed values cannot be trusted to better than $\sim$0.2 mag
-and 20\%.}}
+expressions, as implemented in the LSST Exposure Time
+Calculator).}
 \label{ImageDBtable}
 \end{table}
 
@@ -407,14 +392,8 @@ The science drivers described in \S \ref{scidriv} and
 the corresponding image depths listed in Table~\ref{ImageDBtable}
 have motivated the baseline design
 parameters listed in Appendix A.
-\B{The design specification values for
-DB1 are computed for those baseline design parameters; they have
-been verified using Subaru observations described by Kashikawa {\it et al.}
-(2002, astro-ph/0209445). The uncertainty of these estimates is about
-0.1-0.2 mag.}
-The \R{assumed} bandpasses \B{used in these computations} are illustrated in
-Appendix C. \B{A preliminary version of the LSST Exposure Time Calculator
-(v4.2) was used to compute the depth in $y$ band.} Note that there is no
+The \R{assumed} bandpasses are illustrated in
+Appendix C. Note that there is no
 requirement that exposure time be same for all the bands.
 
 \R{If delivered system throughput would result in brighter limiting magnitudes
@@ -428,21 +407,6 @@ required coadded survey depth, it would have a negative impact on the single
 visit depth and time sampling frequency. The system throughput should never
 drop below values needed to meet minimum specifications for image depths
 listed in Table~\ref{ImageDBtable}.}
-
-\B{A decrease in throughput, DT1, by 30\% of the listed
-values would result in about 0.2 mag loss of depth (DB1) in a given bandpass.
-To maintain the same depth by increasing the integration time, the required
-additional time is about half a year for the $u$ band and 1 year for the
-$y$ band (assuming that 10\% of the total observing time is allocated for
-the $u$ band and 20\% for the $y$ band, see \S~\ref{VvsB}). Hence, a
-loss of throughput by more than 30\% is considered {\it unacceptable}.
-An increase of throughput by, e.g., 25\% of the listed values across all bands
-would reduce the required observing (operations) time by about 2 years (but with
-an undesired impact on long-term measurements such as stellar proper
-motions and long-period variables), or preferably, increase the survey
-depth by about 0.1 mag.}
-
-
 
 \paragraph{The variation of the image depth over the field of view\\}
 
@@ -505,19 +469,6 @@ exposure time. As an added benefit, it will enable an extension of the
 saturation limit $\sim$1 mag brighter than with the nominal exposures.
 Note that the requirement on relative photometric accuracy specified in
 Table \ref{relPhotometry} also applies to these shorter exposures.}
-
-
-\B{The design specification value allows a saturation level $\sim$1 mag brighter than for
-the nominal 15-sec exposures ($\sim$3 mag brighter for the stretch
-goal). Based on the LSST Exposure Time Calculator analysis, we presume that
-the saturation level in the $r$ band will be about 9 magnitudes brighter
-than the SNR=5 value ($r\sim16$, with the full well at $\sim10^5$
-counts). The ability to accurately measure the brightness and positions to
-a brighter level will facilitate calibration. Note that the requirement on
-relative photometric accuracy specified in Table \ref{relPhotometry} also
-applies to these shorter exposures.}
-
-
 
 %%%%%%%%%%%%%%
 \subsubsection{        The Delivered Image Quality       }
@@ -599,9 +550,7 @@ $i$ bands.}
 
 The required image size is derived by assuming that the delivered image
 quality will be dominated by atmospheric seeing effects and not by the
-system. \B{It is also required that the pixel size be smaller than one third
-of the delivered image size (FWHM) in median atmospheric seeing
-($<$0.22 arcsec for the design specification from Table ~\ref{seeingT}).}
+system.
 The design specification values reflect an error budget of 0.35
 arcsec (for both telescope and camera, and including static and dynamic
 errors), which is added in quadrature. The minimum specification and
@@ -615,12 +564,6 @@ contribution to the delivered image quality never exceeds 15\%.
 This requirement should be fulfilled irrespective of the airmass,
 which limits the seeing degradation due to hardware away from the
 zenith (e.g. due to gravity load).
-
-\B{Assuming that the atmospheric seeing
-increases with airmass, $X$, as $\propto X^{0.6}$, the design
-specification for the allowed error budget due to the system is
-0.52 arcsec at airmass of 2 and for the median seeing
-conditions (0.42 arcsec for $X$=1.4).}
 
 {\bf Specification:}
 The allowed seeing error budget due to system at airmass=2 is
@@ -794,7 +737,7 @@ specified through requirements on relative photometry (repeatability), the
 system stability across the sky, color zero-points, and the transfer to a
 physical flux scale (\ie calibration onto the AB magnitude scale).
 
-A broad-band photometric system, such as LSST, aims to \B{measure the}
+A broad-band photometric system, such as LSST, aims to
 \R{deliver calibrated} in-band flux
 \begin{equation}
 \label{Fb}
@@ -1245,19 +1188,6 @@ and thus be a source of false transient detections must be minimized.
 \G{Further constraints, such as maximum sensor area loss and up/down time,
 are addressed in the LSST System Requirements Document.}
 
-
-
-\B{
-Further constraints, except those discussed in Table~\ref{ghosting},
-cannot be made more quantitative at the time of writing than to
-require that the number and brightness of ghosts need be minimized.}
-
-\B{Other issues, such as maximum sensor area loss and up/down time, will be
-addressed through the considerations of efficiency and projected length of
-the survey.}
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1343,8 +1273,7 @@ distributed equally over 6 bands, then the final depth would be 2.8 mag
 deeper than the single image depth. Note that the depth difference between
 these two scenarios is only 0.6 mag.
 
-Detailed simulations of LSST operations \B{available at the time of writing
-\B{(the so-called {\it cronos.92} Operations Simulation run)}}
+Detailed simulations of LSST operations
 indicate that the following sky coverage and
 allocation of observing time per band satisfies a variety of science drivers at a
 nearly optimal level. However, {\it the listed requirements should be
@@ -1410,10 +1339,9 @@ reflect the dependence of the desired final coadded depths on bandpass,
 as well as a minimum number of visits in the $r$ and $i$ bands to enable
 exquisite control of image shape systematics. The bandpass dependence of
 the coadded depths is optimized using a mean galaxy spectral energy
-distribution at a redshift of $\sim$2. \B{The expected number of galaxies
-with an SNR=25 detection in at least one band is about 4 billion.} The adopted
+distribution at a redshift of $\sim$2. The adopted
 depths are also well matched to spectral energy distributions of blue stars
-(\B{about 200 million F/G} main sequence stars will enable kinematic and
+(main sequence stars will enable kinematic and
 metallicity studies all the way to the presumed edge of the Milky Way halo)
 and low-redshift quasars, and to those of very red objects (e.g., high-redshift
 quasars and galaxies, the coldest stars, highly reddened stars in the Milky
@@ -1437,7 +1365,7 @@ paper, arXiv:0805.2366).}
 \caption{An {\it illustration} of the distribution of the number of visits as
 a function of bandpass, obtained by detailed simulations of LSST operations
 that include realistic weather, seeing and sky brightness distributions,
-\B{(version {\it cronos.92})} as well as allocation of about 10\% of the
+as well as allocation of about 10\% of the
 total observing time to special programs. The median
 number of visits per field for all bands is 824. For convenience, the numbers in
 parentheses show the corresponding gain in depth (magnitudes), assuming
@@ -1448,14 +1376,6 @@ $y=22.1$, from Table~\ref{ImageDBtable}), and the above design specification
 for the total number of visits.  \G{The coadded image depth losses due to airmass
 greater than unity are not taken into account. For a large suite of simulated main survey
 cadences, they are about 0.2-0.3 mag, with the median airmass in the range 1.2-1.3.}
-\B{The total depth is computed using a
-preliminary version of the LSST Exposure Time Calculator, with realistic
-observing conditions (the values are within 0.1 mag from the simple $\sqrt{N}$ scaling
-predictions, a consequence of the fact that the sky and source photon noise
-are the dominant noise contributors in all bands). Note, however, that the
-variation of the sky brightness due to solar cycle is {\it not} taken into
-account! At the time of writing, the listed values cannot be trusted to
-better than $\sim$0.2 mag.}
 }
 \label{TdepthCoadd}
 \end{table}
@@ -1633,10 +1553,7 @@ and
 \end{equation}
 where $\sigma_1^2$ and $\sigma_2^2$ are the 2nd moments of the stellar
 image along some set of perpendicular axes, and $\sigma_{12}^2$ is the
-covariance (again, for the best-fit elliptical Gaussian).  \B{We then fit
-a smooth function, such as a low-order polynomial, to the ellipticity
-components' dependence on the position within each CCD and examine the
-residuals.}
+covariance (again, for the best-fit elliptical Gaussian).
 \G{A PCA fit to the ellipticity components’ dependence on the position within
 each CCD is made, and we examine the residuals.}
 It is the {\it correlation of these residuals} $\delta e_1$
@@ -1714,16 +1631,6 @@ Quantity       &   Design Spec & Minimum Spec  & Stretch Goal \\
 
 The residual ellipticity correlations vary smoothly so it is sufficient to specify
 limits in these two angular ranges.
-\B{To be moved to the LSST System Requirements Document:
-Tests based on data obtained by Subaru telescope suggest that these values are
-achievable: the atmospheric contribution to residual ellipticity correlation averages
-down with the number of exposures. This assumes that effective use of the priors
-discussed in the single-image ellipticity specifications is made, otherwise recurring
-systematics will dominate the averaged-down random atmosphere effects. This requires
-optimal correction of the PSF in each image, and fits a model for each galaxy in each
-image [MultiFit]. An alternative approach being explored is to utilize an image of the
-coadded PSF, and fit a forward model of the (known) sum PSF convolved with a galaxy
-model to the stacked image [StackFit].}
 On 1 arcmin to 5 arcmin scales, these residual
 ellipticity correlations put LSST systematics a factor of a few below the
 weak lensing shot noise, i.e. statistical errors will dominate over systematics.
@@ -1908,4 +1815,3 @@ attention of the LSST Science Council, who will review the case and, if
 appropriate, propose changes to the LSST Change Control Board. Please report
 such, and any other, concerns and comments to \v{Z}eljko
 Ivezi\'{c}\footnote{E-mail: ivezic@astro.washington.edu}.
-
