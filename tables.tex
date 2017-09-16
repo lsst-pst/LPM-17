@@ -9,9 +9,9 @@ requirements to be placed upon the various technical subsystems that
 comprise the LSST. Note that some of these requirements are not fully
 independent of the existing baseline design (see Appendix A), and of
 realities such as seeing and sky brightness distribution at the selected
-site (Cerro Pach\'{o}n in Chile). \G{While different science programs
+site (Cerro Pach\'{o}n in Chile). While different science programs
 require broadly consistent datasets, the adopted values represent the
-most stringent requirements from the previous section.}
+most stringent requirements from the previous section.
 
 
 \subsection{The Definitions of Specified Parameters }
@@ -72,7 +72,7 @@ in detail because they directly constrain the capabilities of the hardware
 and software systems. The detailed error budget distribution between the hardware
 and software systems is not considered here and will be addressed in a
 separate documents
-\G{(the LSST System Requirements Document and the LSST System Architecture Document)}.
+(the LSST System Requirements Document and the LSST System Architecture Document).
 \R{As a general principle, the measurement errors for fundamental quantities,
 such as astrometry, photometry and image size, should not be dominated
 by algorithmic performance.}
@@ -364,7 +364,7 @@ mag (Table~\ref{ImageDBtable}).
  Minim. spec.  &       u   &     g    &      r     &   i   &   z   &  y   \\
 \hline
 %\B{OLD DB1 (mag)}  &    23.7   &    24.8  &     24.5   &  23.8 &  23.1 & 21.9 \\
-\G{DB1 (mag)}  &    23.4   &    24.6  &     24.3   &  23.6 &  22.9 & 21.7 \\
+DB1 (mag)  &    23.4   &    24.6  &     24.3   &  23.6 &  22.9 & 21.7 \\
 %\hline
 % DT1 (\%)   &     10    &     35   &      50    &   50  &   40  &  20  \\
 \hline
@@ -1185,8 +1185,8 @@ shape measurements, are partially addressed through photometric
 requirements (\eg the fraction of objects with substandard photometry).
 The presence of ghost images which can be confused with new point sources
 and thus be a source of false transient detections must be minimized.
-\G{Further constraints, such as maximum sensor area loss and up/down time,
-are addressed in the LSST System Requirements Document.}
+Further constraints, such as maximum sensor area loss and up/down time,
+are addressed in the LSST System Requirements Document.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1214,19 +1214,19 @@ technological forefront.
 \end{enumerate}
 
 As a result of these studies, the adopted baseline design (see Appendix A)
-assumes a nominal 10-year duration \G{with about 90\% of the observing
-time allocated} for the \G{main} LSST survey. The same assumption
+assumes a nominal 10-year duration with about 90\% of the observing
+time allocated for the main LSST survey. The same assumption
 was adopted here to derive the requirements described below.  \R{Only visits
 that satisfy the requirements listed in the previous section are counted
 towards the specifications listed in this Section. For example, if the photometric
 accuracy falls below requirements due to complex atmospheric cloud structure,
 or due to extraneous noise sources inside the system, the data will not be counted.}
-\G{The remaining 10\% of observing time will be used to obtain improved coverage
+The remaining 10\% of observing time will be used to obtain improved coverage
 of parameter space such as very deep ($r\sim26$) observations, observations with
 very short revisit times ($\sim$1 minute), and observations of  ``special'' regions
 such as the Ecliptic, Galactic plane, and the Large and Small Magellanic Clouds.
 A third type of survey, micro-surveys, that would use about 1\% of the time,
-may also be considered.}
+may also be considered.
 
 
 Note that some quantities relevant for science analysis are indirectly
@@ -1359,7 +1359,7 @@ paper, arXiv:0805.2366).}
 \hline
  Nv1 (design spec.)   &  56 (2.2) & 80 (2.4) &  184 (2.8) & 184 (2.8) & 160 (2.8) & 160 (2.8) \\
 \hline
-\G{Idealized} Depth         &    26.1   &    27.4  &     27.5   &  26.8     &   26.1    & 24.9  \\
+Idealized Depth         &    26.1   &    27.4  &     27.5   &  26.8     &   26.1    & 24.9  \\
 \hline
 \end{tabular}
 \caption{An {\it illustration} of the distribution of the number of visits as
@@ -1373,17 +1373,17 @@ $\sqrt{N}$ scaling. The last row shows the total {\it idealized} coadded
 depth for the design specification median depth of a single image (assuming
 5$\sigma$ depths at $X=1$ of $u=23.9$, $g=25.0$, $r=24.7$, $i=24.0$, $z=23.3$ and
 $y=22.1$, from Table~\ref{ImageDBtable}), and the above design specification
-for the total number of visits.  \G{The coadded image depth losses due to airmass
+for the total number of visits.  The coadded image depth losses due to airmass
 greater than unity are not taken into account. For a large suite of simulated main survey
-cadences, they are about 0.2-0.3 mag, with the median airmass in the range 1.2-1.3.}
+cadences, they are about 0.2-0.3 mag, with the median airmass in the range 1.2-1.3.
 }
 \label{TdepthCoadd}
 \end{table}
 
-\G{The coadded image depth losses due to airmass greater than unity are not
+The coadded image depth losses due to airmass greater than unity are not
 taken into account because they depend on cadence details. For a large suite
 of simulated main survey cadences, they are about 0.2-0.3 mag, with the median airmass in
-the range 1.2-1.3.}
+the range 1.2-1.3.
 Table~\ref{TdepthCoadd} specifies the {\it median} number of visits. The actual
 number of visits may vary across the sky. For example, the regions close to
 the Ecliptic may benefit from longer exposures to improve the size and distance
@@ -1443,7 +1443,6 @@ not be of sufficient accuracy if the majority of visits are clustered around
 the same epoch. Similarly, proper motion measurements require that a large
 fraction of the observations are spread over as long a baseline as possible.
 
-\G{
 {\bf Specification:} The median trigonometric parallax accuracy across the main
 survey area for unresolved sources with $r=24$ must be at least
 \param{SIGpara}{The trigonometric parallax error for a $r$=24 source (mas).} mas.
@@ -1455,7 +1454,7 @@ sources detected only in the $y$ band (at 10$\sigma$) must be at least
 \param{SIGparaRed}{The trigonometric parallax error for 10$\sigma$
 $y$-band only detections (mas).} mas.
 (Table~\ref{TablePARAPM}).
-}
+
 \begin{table}[h]
 \begin{tabular}{|r|r|r|r|}
 \hline
@@ -1480,13 +1479,13 @@ arXiv:0805.2366), if the astrometric requirements from the previous section are 
 }
 
 
-\G{Additional constraints on the distribution of visits in time come from
+Additional constraints on the distribution of visits in time come from
 the requirement to efficiently detect and characterize moving Solar System
 objects. In addition to their own science drivers, this requirement is driven
 by the fact that they may significantly contaminate samples of transients
 (see Section~\ref{sec:transients}).  In order to enable robust inter-night
 linking of their detections, the current baseline cadence assumes two
-visits per night  (see Appendix B).}
+visits per night  (see Appendix B).
 
 
 \paragraph{Distribution of visits vs. observing conditions\\}
@@ -1554,8 +1553,8 @@ and
 where $\sigma_1^2$ and $\sigma_2^2$ are the 2nd moments of the stellar
 image along some set of perpendicular axes, and $\sigma_{12}^2$ is the
 covariance (again, for the best-fit elliptical Gaussian).
-\G{A PCA fit to the ellipticity components’ dependence on the position within
-each CCD is made, and we examine the residuals.}
+A PCA fit to the ellipticity components’ dependence on the position within
+each CCD is made, and we examine the residuals.
 It is the {\it correlation of these residuals} $\delta e_1$
 and $\delta e_2$, not their
 mean size, which sets the level of weak lensing systematics.  We
@@ -1649,9 +1648,9 @@ of patches will have substantially better or worse seeing than average.
 
 \subsection{Data Processing and Management Requirements}
 
-\G{Detailed requirements on data processing and management will be described
+Detailed requirements on data processing and management will be described
 in the LSST System Requirements Document (for example, specifications for catalog completeness
-and reliability)}. Here, only a rough guidance is provided. \R{There will be three
+and reliability). Here, only a rough guidance is provided. \R{There will be three
 main categories of data products:
 
 \begin{itemize}
