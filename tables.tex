@@ -71,8 +71,8 @@ are specified
 in detail because they directly constrain the capabilities of the hardware
 and software systems. The detailed error budget distribution between the hardware
 and software systems is not considered here and will be addressed in a
-separate documents
-(the LSST System Requirements Document and the LSST System Architecture Document).
+separate documents (the LSST System Requirements Document and the LSST System
+Architecture Document).
 As a general principle, the measurement errors for fundamental quantities,
 such as astrometry, photometry and image size, should not be dominated
 by algorithmic performance.
@@ -390,10 +390,8 @@ Calculator).}
 
 The science drivers described in \S \ref{scidriv} and
 the corresponding image depths listed in Table~\ref{ImageDBtable}
-have motivated the baseline design
-parameters listed in Appendix A.
-The assumed bandpasses are illustrated in
-Appendix C. Note that there is no
+have motivated the baseline design parameters listed in Appendix A.
+The assumed bandpasses are illustrated in Appendix C. Note that there is no
 requirement that exposure time be same for all the bands.
 
 If delivered system throughput would result in brighter limiting magnitudes
@@ -550,8 +548,7 @@ $i$ bands.}
 
 The required image size is derived by assuming that the delivered image
 quality will be dominated by atmospheric seeing effects and not by the
-system.
-The design specification values reflect an error budget of 0.35
+system. The design specification values reflect an error budget of 0.35
 arcsec (for both telescope and camera, and including static and dynamic
 errors), which is added in quadrature. The minimum specification and
 stretch goal are computed using error budgets of 0.4 and 0.3 arcsec,
@@ -772,7 +769,7 @@ barrier (especially for sources with complex spectral energy distributions,
 such as supernovae). While the individual normalizations of $S_b^{sys}(\lambda)$ and
 $S_b^{atm}(\lambda)$ are {\it not} required (c.f. eq.~\ref{PhiDef}) to
 interpret measurements using eq.~\ref{Fb}, the flux scale (calibration)
-errors affect the reported values of $F_b$ (i.e. $m_b$).  Therefore,
+errors affect the reported values of $F_b$ (i.e. $m_b$). Therefore,
 for each photometric measurement both $F_b$ and $\phi_b(\lambda)$
 will be reported, together with their estimated uncertainties. These
 two quantities will capture fundamental information included in LSST
@@ -858,16 +855,14 @@ the $u$, $z$ and $y$ bands may be 50\% larger.}
 \label{relPhotometry}
 \end{table}
 
-This requirement, defined for bright, unresolved sources
-(\ie those whose measurements are not dominated by photon
-statistics, see \S~\ref{singleImageSpecs}),
-specifies the distribution of random photometric
-errors, $\sigma$, and constrains both the repeatability of extracting
-counts from images and the ability to monitor (or model) the
-changes in normalized system response ($\phi$). In practice,
-multiple visits will be used to compute the photometric rms for each
-individual star in each bandpass and then study its dependence on position on the sky
-and on the camera, stellar color, brightness, time, etc.
+This requirement, defined for bright, unresolved sources (\ie those whose measurements
+are not dominated by photon statistics, see \S~\ref{singleImageSpecs}), specifies the
+distribution of random photometric errors, $\sigma$, and constrains both the repeatability
+of extracting counts from images and the ability to monitor (or model) the changes in
+normalized system response ($\phi$). In practice,
+multiple visits will be used to compute the photometric rms for each individual star in each
+bandpass and then study its dependence on position on the sky and on the camera, stellar
+color, brightness, time, etc.
 
 The specified values are driven by the photometric redshift accuracy,
 the separation of stellar populations, detection of low-amplitude variable
@@ -1272,8 +1267,7 @@ distributed equally over 6 bands, then the final depth would be 2.8 mag
 deeper than the single image depth. Note that the depth difference between
 these two scenarios is only 0.6 mag.
 
-Detailed simulations of LSST operations
-indicate that the following sky coverage and
+Detailed simulations of LSST operations indicate that the following sky coverage and
 allocation of observing time per band satisfies a variety of science drivers at a
 nearly optimal level. However, {\it the listed requirements should be
 understood only as an illustration of the LSST capabilities because
@@ -1627,8 +1621,7 @@ Quantity       &   Design Spec & Minimum Spec  & Stretch Goal \\
 \end{table}
 
 The residual ellipticity correlations vary smoothly so it is sufficient to specify
-limits in these two angular ranges.
-On 1 arcmin to 5 arcmin scales, these residual
+limits in these two angular ranges. On 1 arcmin to 5 arcmin scales, these residual
 ellipticity correlations put LSST systematics a factor of a few below the
 weak lensing shot noise, i.e. statistical errors will dominate over systematics.
 On larger scales, the noise level imposed by nature due to shot noise plus
