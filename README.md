@@ -27,3 +27,8 @@ Three support files are required: `makeglos.pl`, `pdfrhl.tex` and
 `glossary.sty`; and the rest is standard latex.
 
 ***the pdf file can be built by simply executing `> make`***
+
+
+If you run into this error:
+`LaTeX Error: File lsstdoc.cls not found.`
+then follow instructions at https://lsst-texmf.lsst.io/install.html
